@@ -4,7 +4,7 @@
 % - recto ou recto-verso    : oneside, twoside
  
 % Chargement d'extensions
-\usepackage[latin1]{inputenc}    
+\usepackage[utf8]{inputenc}    
 \usepackage[francais]{babel}    
 \usepackage[margin=1in]{geometry}
  
@@ -19,21 +19,25 @@
  
     % Le prologue du livre
     \frontmatter
- 
-    \chapter{Avant-propos}
-    \chapter{Remerciements}
     \chapter{Introduction}
  
     % Corps du livre
     \mainmatter
  
-    \part{Une partie}
+    \part{Blockchain point de vue global}
     \chapter{Un chapitre}
     \section{Une section}
     \subsection{Une sous-section}
     \subsubsection{Une sous-sous-section}
-    \paragraph{Une sous-sous-sous-sous-section}
-    \subparagraph{Une sous-sous-sous-sous-sous-section}
+    \paragraph{On écrit ici}
+
+    \part{Blockchain dans sa technique (pourquoi c'est sécurisé)}
+
+    \part{Les failles / types d'attaques + exemples connus}
+
+    \part{Point de vue légalité (on parle pas de crypto ici mais de la blockchain)}
+
+    \part{Impact économique écologique}
  
     % Les annexes
     \appendix
@@ -47,9 +51,10 @@
     \chapter{Conclusion et discussion}
  
     
-    \tableofcontents    
-    \listoffigures        % Liste des figures
-    \listoftables        % Liste des tableaux
+    \tableofcontents
+
+    \bibliographystyle{unsrt}
+    \bibliography{TD_SSI_biblio}
  
 % Fin du document
 \end{document}
