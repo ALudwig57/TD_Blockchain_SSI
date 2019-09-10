@@ -8,6 +8,7 @@
 -	Trouver des exemples réels (sources ouvertes)  d’utilisation de la blockchain en entreprise.
 -	Smarts Contracts ? Explications et exemples
 -	Quelles sont les secteurs qui utilisent la blockchain ?
+
 •	blockchain dans sa technique (pourquoi c'est sécurisé)
 -	La décentralisation des données
 -	Les couts de la blockchain (pourquoi)
@@ -18,21 +19,22 @@
 -	Différence Ethereum, Bitcoin La blockchain, futur standard des transactions numériques ?
 -	Blockchain et monnaie numérique (cryptos) sont-elles indissociables ?
 -	Blockchain et Cloud
--	
+	
 
 •	Les failles / types d'attaques + exemples connus
 -	Un rempart contre le piratage ?
 -	L’attaque des 51 %, attaque renversée
 -	Est-ce possible de modifier, supprimer, altérer une données dans une blockchain ?
 -	Trouver des exemples déjà fait (vote en russie cf cours)
--	
+
+
 •	Point de vue légalité (on parle pas de crypto ici mais de la blockchain)
 -	Les législations autour des données en chaines
 -	BlockChain et RGPD
 -	(La confidentialité avec la blockchain (blockchain privée/public))
 -	Où en est la blockchain à l’étranger ? Différence entre l’utilisation de la blockchain et des crypto en France contre l’étranger
 -	Blockchain et tourisme
--	
+
 •	impact économique écologique / entreprise
 -	Les limites des coûts énergétiques et environnementaux
 -	Le Bitcoin et les cryptomonnaies dans tout ça ?
