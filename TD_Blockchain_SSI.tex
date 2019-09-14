@@ -7,6 +7,7 @@
 \usepackage[utf8]{inputenc}    
 \usepackage[francais]{babel}    
 \usepackage[margin=1in]{geometry}
+\usepackage{dirtytalk}
  
 % Informations le titre, le(s) auteur(s), la date
 \title{La Blockchain}
@@ -34,6 +35,16 @@
     \part{Blockchain dans sa technique (pourquoi c'est sécurisé)}
 
     \part{Les failles / types d'attaques + exemples connus}
+    \paragraph{La blockchain n'est pas inviolable, mais comme souvent, les failles présentes sont dûes à des erreurs d'implémentations ou à des négligences. La seule attaque ne se basant pas sur ces vulnérabilités est appelée \emph{Attaque 51}.}
+    \chapter{Attaque 51}
+    \paragraph{La blockchain se basant sur le principe de consensus, si un groupe de personne possède plus de 50 \% de la capacité de calcul, elle crée un autre consensus qui peut être faussé par l'introduction de blocs corrompus qui annuleraient des transactions par exemple. De ce fait, on peut modifier la blockchain et la faire plus longue que celle calculée par le reste du réseau, ce qui la rendrait légitime par tout le réseau.}
+    \section{Réalisation}
+    \paragraph{Pour obtenir 51 \% de la puissance totale de calcul, on pourrait détourner des machines de calcul existantes pour les réunir sous une même banière (un même pool).}
+
+    
+    \paragraph{Il existe également la possibilité de créer une nouvelle capacité de calcul, en créant une nouvelle ferme de serveur pour arriver à une capacité X+1 (avec X la capacité déjà existante) pour atteindre une capacité totale de X+X+1.}
+    \section{Finalité}
+    \section{Exemple}
 
     \part{Point de vue légalité (on parle pas de crypto ici mais de la blockchain)}
 

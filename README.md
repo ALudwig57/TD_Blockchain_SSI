@@ -25,7 +25,7 @@ Les failles / types d'attaques + exemples connus
 -	Un rempart contre le piratage ?
 -	L’attaque des 51 %, attaque renversée
 -	Est-ce possible de modifier, supprimer, altérer une données dans une blockchain ?
--	Trouver des exemples déjà fait (vote en russie cf cours)
+-	Trouver des exemples déjà fait (vote en russie cf cours, DAO)
 
 
 Point de vue légalité (on parle pas de crypto ici mais de la blockchain)
