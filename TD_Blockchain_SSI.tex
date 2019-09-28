@@ -7,7 +7,7 @@
 \usepackage[utf8]{inputenc}    
 \usepackage[francais]{babel}    
 \usepackage[margin=1in]{geometry}
-\usepackage{hyperref}
+\usepackage{url}
  
 % Informations le titre, le(s) auteur(s), la date
 \title{La Blockchain}
@@ -40,18 +40,18 @@
     \paragraph{La blockchain se basant sur le principe de consensus, si un groupe de personne possède plus de 50 \% de la capacité de calcul, elle crée un autre consensus qui peut être faussé par l'introduction de blocs corrompus qui annuleraient des transactions par exemple. De ce fait, on peut modifier la blockchain et la faire plus longue que celle calculée par le reste du réseau, ce qui la rendrait légitime par tout le réseau.}
     \subsection{Réalisation}
     \paragraph{Pour obtenir 51 \% de la puissance totale de calcul, on pourrait détourner des machines de calcul existantes pour les réunir sous une même banière (un même pool).}
-
-    
-    \paragraph{Il existe également la possibilité de créer une nouvelle capacité de calcul, en créant une nouvelle ferme de serveur pour arriver à une capacité X+1 (avec X la capacité déjà existante) pour atteindre une capacité totale de X+X+1.}
-    \subsection{Finalité}
-    \subsection{Exemple}
-
-    \chapter{Point de vue légalité (on parle pas de crypto ici mais de la blockchain)}
-
-    \section{La blockchain et la protection des données}
-
-    \subsection{L'incompatibilité avec la RGPD}
-
+    \paragraph{Il existe également la possibilité de créer une nouvelle capacité de calcul, en créant une nouvelle ferme de serveur pour arriver à une capacité X+1 (avec X la capacité déjà existante) pour atteindre une capacité totale de X+X+1. Cette possibilité est seulement théorique puisqu'il faudrait doubler le parc existant, déjà colossal.}
+    \section{Finalité}
+    \paragraph{Le but principal d'une attaque 51\% est de falsifier les blocs, pour masquer des transactions, falsifier des informations ou, dans le cas d'une cryptomonnaie, effectuer une double dépense, c'est-à-dire effectuer une transaction, l'effacer de la chaine, et effectuer une autre transaction à la place de la première.
+    \newline
+    Tout ceci peut casser la confiance dans une blockchain et la rendre caduque.}
+    \section{Exemple}
+    \paragraph{En début d'année 2019, la blockchain Ethereum Classic (ETC) a subi une attaque 51, il y a eu plusieurs réorganisations, qui ont prmis des doubles dépenses. Le préjudice est éstimé à 219 500 ETC, soit plus de 1 million de dollars à l'époque.
+    \\
+    Cette attaque a été rendue possible car la puissance de calcul nécessaire était tellement négligeable que cela ne coutait que 4500 \$ par heure.\cite{51ETC}}
+    \part{Point de vue légalité (on parle pas de crypto ici mais de la blockchain)}
+    \chapter{La blockchain et la protection des données}
+    \section{L'incompatibilité avec la RGPD}
     \paragraph{Le droit des données personnelles permet 
     à une personne concernée de demander l’accès, la rectification 
     et l’effacement de ces données sous certaines conditions. 
@@ -119,7 +119,6 @@
 
     \bibliographystyle{unsrt}
     \bibliography{TD_SSI_biblio}
-
  
 % Fin du document
 \end{document}
