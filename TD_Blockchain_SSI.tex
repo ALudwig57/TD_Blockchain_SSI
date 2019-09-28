@@ -20,35 +20,38 @@
  
     % Le prologue du livre
     \frontmatter
-    \chapter{Introduction}
+    \section{Introduction}
  
     % Corps du livre
     \mainmatter
  
-    \part{Blockchain point de vue global}
-    \chapter{Un chapitre}
-    \section{Une section}
-    \subsection{Une sous-section}
-    \subsubsection{Une sous-sous-section}
+    \chapter{Blockchain point de vue global}
+    \section{Un chapitre}
+    \subsection{Une subsection}
+    \subsubsection{Une sous-subsection}
+    \subsubsection{Une sous-sous-subsection}
     \paragraph{On écrit ici}
 
-    \part{Blockchain dans sa technique (pourquoi c'est sécurisé)}
+    \chapter{Blockchain dans sa technique (pourquoi c'est sécurisé)}
 
-    \part{Les failles / types d'attaques + exemples connus}
+    \chapter{Les failles / types d'attaques + exemples connus}
     \paragraph{La blockchain n'est pas inviolable, mais comme souvent, les failles présentes sont dûes à des erreurs d'implémentations ou à des négligences. La seule attaque ne se basant pas sur ces vulnérabilités est appelée \emph{Attaque 51}.}
-    \chapter{Attaque 51}
+    \section{Attaque 51}
     \paragraph{La blockchain se basant sur le principe de consensus, si un groupe de personne possède plus de 50 \% de la capacité de calcul, elle crée un autre consensus qui peut être faussé par l'introduction de blocs corrompus qui annuleraient des transactions par exemple. De ce fait, on peut modifier la blockchain et la faire plus longue que celle calculée par le reste du réseau, ce qui la rendrait légitime par tout le réseau.}
-    \section{Réalisation}
+    \subsection{Réalisation}
     \paragraph{Pour obtenir 51 \% de la puissance totale de calcul, on pourrait détourner des machines de calcul existantes pour les réunir sous une même banière (un même pool).}
 
     
     \paragraph{Il existe également la possibilité de créer une nouvelle capacité de calcul, en créant une nouvelle ferme de serveur pour arriver à une capacité X+1 (avec X la capacité déjà existante) pour atteindre une capacité totale de X+X+1.}
-    \section{Finalité}
-    \section{Exemple}
+    \subsection{Finalité}
+    \subsection{Exemple}
 
-    \part{Point de vue légalité (on parle pas de crypto ici mais de la blockchain)}
-    \chapter{La blockchain et la protection des données}
-    \section{L'incompatibilité avec la RGPD}
+    \chapter{Point de vue légalité (on parle pas de crypto ici mais de la blockchain)}
+
+    \section{La blockchain et la protection des données}
+
+    \subsection{L'incompatibilité avec la RGPD}
+
     \paragraph{Le droit des données personnelles permet 
     à une personne concernée de demander l’accès, la rectification 
     et l’effacement de ces données sous certaines conditions. 
@@ -62,48 +65,54 @@
     \newline
     Une solution à ce problème serait d'interdire l'usage de l'inscription de données personnelles dans la blockchain publique. 
     Cependant, cette solution de prend pas en compte les spécificités et les opportunités de la blockchain.
-    }
+    \cite{reg}}
 
-    \section{Comment la blockchain protège notre vie privée ?}
+    \subsection{Comment la blockchain protège notre vie privée ?}
 
     \paragraph{Malgré le fait que ses principes 
      soient incompatibles avec la RGPD, la blockchain apporte une protection à la vie privée non négligeable. 
      En effet, la blockchain est directement fondée sur des algorithmes de chiffrement robustes et sur le pseudonymat,
-     ce qui la protège du hacking sans pour autant avoir besoin de collecte massive de données personnelles
+     ce qui la protège du hacking sans pour autant avoir besoin de collecte massive de données personnelles.
      \cite{reg}}
 
-    \chapter{Rapport d'activité de 2018 de l'ANSSI}
+    \section{Rapport d'activité de 2018 de l'ANSSI}
 
-    \paragraph{Le 15 avril 2019, l'ANSSI a publié son rapport d'activités de 2018, intitulé \it{"Construire ensemble la confiance 
+    \paragraph{Le 15 avril 2019, l'ANSSI a publié son rapport d'activités de 2018, intitulé \textit{"Construire ensemble la confiance 
     numerique de demain"}. 
     Dans ce rapport, L'ANSSI met en avant 5 types de cybermenaces, dont une qui viserait à générer de façon frauduleuse des 
     cryptomonnaies. Par conséquent, l'ANSSI considère que la sécurité absolue des blockchains n'est qu'un mythe.
     \cite{anssi2018}}
 
-    \chapter{La blockchain dans le Code monétaire et financier}
+    \section{La blockchain dans le Code monétaire et financier}
 
     \paragraph{En décembre 2017, Emmanuel Macron, afin de placer la France en tête de l'innovation financière en Europe, 
     a signé une ordonnance qui inscrit le droit d'utilisation de la blockchain dans l'investissement non-côté.
+    \\
+    \newline
     Ce projet modifie le Code Monétaire et financier de plusieurs manières. La première consiste à proposer la blockchain comme nouvelle 
-    modalité technique d'inscription et de transfert des titres non côtés, à savoir les parts de fonds, les titres de créance négociables,
+    modalité technique d'inscription et de transfert des titres non côtés, à savoir les chapters de fonds, les titres de créance négociables,
     et les actions et obligations non côtés, qui devaient auparavant être matérialisé par un compte-titres.
+    \\
+    \newline
     Ils pourront désormais être inscris dans une blockchain puis être échangés sans passer par aucun intermédiaire.
     Par conséquent, cette technologie proposera une solution plus rapide, moins chère, plus transparente et plus sûre.
+    \\
+    \newline
     De plus, la France devient le premier pays européen et sûrement mondial à légaliser l'inscription et le transfert de titres non côtés par blockchain. 
     \cite{CodeMonetaireFinancier}}
 
-    \part{Impact économique écologique}
+    \chapter{Impact économique écologique}
  
     % Les annexes
     \appendix
  
-    \chapter{Premier annexe}
-    \chapter{Second annexe}
+    \section{Premier annexe}
+    \section{Second annexe}
  
     
     \backmatter
  
-    \chapter{Conclusion et discussion}
+    \section{Conclusion et discussion}
  
     
     \tableofcontents
