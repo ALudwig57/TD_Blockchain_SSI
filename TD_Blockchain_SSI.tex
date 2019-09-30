@@ -1,3 +1,20 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@yoanFath 
+2
+00ALudwig57/TD_Blockchain_SSI
+ Code Issues 0 Pull requests 0 Projects 0 Wiki Security Insights
+TD_Blockchain_SSI/TD_Blockchain_SSI.tex
+ Arnaud Couderc fonctionnement et applications BC
+1a3df47 2 days ago
+261 lines (204 sloc)  16.5 KB
+  
 \documentclass[12pt, a4paper, oneside]{book}
  
 % - taille de la fonte    : 10pt, 11pt, 12pt
@@ -37,9 +54,49 @@
     % \subsubsection{Une sous-sous-subsection}
     % On écrit ici}
 
+    \chapter{Introduction à la blockchain}
+    \section{Nouvelle technologie - Historique}
+    En 1991 l’architecture de la blockchain à été décrit par les chercheurs Stuart Haber et W. Scott Stornetta lors d’une recherche permettant l’horodatage de documents numériques assurant qu’ils ne soient jamais antidatés ou altérés. 
+En 1992 le protocole « arbre de Merkle » fut utilisé pour combiner plusieurs documents dans un seul bloc. 
+Le brevet déposé expira en 2004, 4 ans avant la création du Bitcoin.
+Le retour de la blockchain à été en 2008 avec la publication d’un livre blanc par un inconnu se présentant sous le pseudonyme Satoshi Nakamoto, son but était d’introduire un système de paiement électronique décentralisé peer-to-peer, le Bitcoin.
+    \section{Qu'est ce que la blockchain ?}
+    La blockchain est une architecture de stockage de données et de transmissions d’informations sécurisée qui fonctionne de manière décentralisée avec des blocs de données reliés entre eux. Elle contient l’historique de toutes les transactions effectuées entre les utilisateurs depuis sa création. 
+
+La blockchain utilise un système cryptographique fondé sur un système décentralisé de preuves qui nécessite une puissance de calcul importante fournie par les mineurs, notamment pour ouvrir un nouveau bloc pour y inscrire les données et pour vérifier la validité d’un bloc. Le détail du fonctionnement sera expliqué dans la partie technique.
+
+IMAGE DE LA BLOCKCHAIN
+
+Les intérêts de la blockchain sont que tous les échanges, bien qu’ils soient anonymes consultables ne sont pas modifiable et n’ont pas besoin d’un tiers de confiance, l’ensemble du réseau se charge d’authentifier les transactions avec la méthode de cryptographie utilisée.
+
+\section{La décentralisation des données}
+    Le fait que la blockchain soit décentralisé et partagée entre ses utilisateurs permet la vérification de l’intégrité de la chaine par n’importe quel utilisateur, même les créateurs n’ont aucun pouvoir unilatéral sur la blockchain (censure) ou la modification du fonctionnement ce qui est totalement différent des applications proposées par exemple des dirigeants des GAFA.
+
+Avec la décentralisation des données l’utilisateur est maitre de ses données personnelles et de son identité numérique, il peut choisir les services qui accèderont à ses donner et en monnayer l’accès, tout en pouvant révoquer l’accès quand il le souhaite. Cela permet de présenter une facette de son identité en fonction du contexte toute son identité. 
+
+\section{Les tokens}
+Toute blockain publique fonctionne obligatoirement avec un jeton : « le Token » qui est programmable et personnalisable pour représenter ce qui sera échangé. Cela peut être une cryptomonnaie, un droit d’usage, un droit de payement, une réputation… Cela peut vraiment prendre n’importe quelle forme et c’est ce qui sera utilisé et échangé en peer-to-peer sans duplication sur la blockchain.
+Ce token peut être acheté et vendu n’importe quand en fonction de l’offre et de la demande sur une plateforme d’échange, son prix n’est jamais fixe mais varie tout le temps. 
+
+Un token conserve toute les caractéristiques d’une cryptomonnaie : infalsifiable, enregistrement de la transaction dans un bloc immuable, sécurité des échanges.
+
+\section{Le Bitcoin et les cryptomonnaies dans tout ça ?}
+La première blockchain qui s’est développée en 2009 est un système de payement qui utilise une cryptomonnaie comme token : le bitcoin. 
+A chaque transaction réalisée les agents qui traitent et vérifient les transactions sont rétribué, ce sont les mineurs. Le fait de miner consiste à vérifier, sécuriser et enregistrer une transaction et des bitcoins sont généré dans le système à chaque minage.
+ Le système à une limite de 21 millions d’unités sur le marché et d’après les estimations ce cap sera atteint d’ici 2050, ce rendra le bitcoin encore plus rare car limité. Le bitcoin, comme toute cryptomonnaie peut être échangé sur des places de marchés avec la loi de l’offre et de la demande, ce qui peut grandement faire varier le prix comme en 2017 lorsque le prix du bitcoin a explosé dû à la demande.
+
+Le bitcoin prend une place importante sur le marché car le nombre de commerçants qui acceptent les bitcoins augmentent petit à petit, comme Microsoft ou Steam pendant un temps mais qui ont retiré cette option ensuite.
+
+\section{Les 3 types de blockchain}
+
+Il existe 3 types de blockchain, la blockchain publique où tout le monde peut effectuer ou vérifier les transactions, la blockchain privée nécessite une autorisation pour y accéder, elles sont utilisées notamment lors des expérimentations.
+Enfin il y a les consortiums, ce sont des blockchains hybride. // A FINIR
+
+    
+    
     \chapter{Les applications de la blockchain}
 
-    Majoritairement, lorsqu’on parle de blockchain, le premier mot qui nous vient à l’esprit est bitcoin. Peut-être à juste titre, car les cryptomonnaies représentent l’application la plus médiatisée de la blockchain. Mais saviez-vous que le domaine de la Finance n’est pas le seul à être courtisé par la blockchain ? Nous avons choisi de vous parler d’applications plus à la marge, qui pourraient révolutionner leurs domaines.
+    Majoritairement, lorsqu’on parle de blockchain, le premier mot qui nous vient à l’esprit est bitcoin. Peut-être à juste titre, car les cryptomonnaies représentent l’application la plus médiatisée de la blockchain. Mais saviez-vous que le domaine de la Finance n’est pas le seul à être courtisé par la blockchain ? Nous avons choisi de vous parler d’applications plus à la marge, qui pourraient révolutionner leurs domaines.
 
     \section{L'industrie du jeu video}
 
@@ -47,7 +104,7 @@
     \\
     C’est dans la gestion de la progression du joueur que la blockchain pourrait intervenir. En effet, la valeur d’un joueur est souvent associée à la quantité de pièces et d’objets brillants qu’il a pu acquérir en complétant des niveaux, succès, etc... La progression représente la colonne vertébrale de la plupart des jeux et sécuriser celle-ci, en la rendant infalsifiable, semble donc essentiel.
     \\
-    Un exemple concret est Miniclip’s 8-Ball Pool. Il s’agit d’un jeu mobile de billard, où quelques joueurs ont réussi acquérir des avantages beaucoup plus tôt que prévu dans le jeu, leur donnant ainsi un avantage déloyal face aux joueurs honnêtes décourageant ces derniers de jouer.
+    Un exemple concret est Miniclip’s 8-Ball Pool. Il s’agit d’un jeu mobile de billard, où quelques joueurs ont réussi acquérir des avantages beaucoup plus tôt que prévu dans le jeu, leur donnant ainsi un avantage déloyal face aux joueurs honnêtes décourageant ces derniers de jouer.
     
     \begin{figure}[H]
         \begin{center}
@@ -65,7 +122,7 @@
     \\
     Le postulat de base est simple. Les consommateurs n’ont jamais eu autant de choix dans la diversité de leurs aliments. Pourtant d’après IBM, 84\% des acheteurs considèrent au moment de leur achat, où et comment ont été produits les aliments. C’est là que la blockchain peut être décisive dans un milieu aussi compétitif puisqu'elle permet une transparence totale de la chaîne d’approvisionnement et de la fabrication, toujours grâce à l’aspect infalsifiable du registre de transaction.
     \\
-    D’après Nestlé, cela permet de « renforcer le lien de confiance avec ses consommateurs ». C’est pourquoi ces derniers appliquent cette solution sur 15 de leurs produits phares, notamment la purée Mousline. Carrefour compte quant à lui déployer cette solution d’ici 2020 sur l’ensemble des produits alimentaires Filière Qualité Carrefour, soit 300 références.
+    D’après Nestlé, cela permet de « renforcer le lien de confiance avec ses consommateurs ». C’est pourquoi ces derniers appliquent cette solution sur 15 de leurs produits phares, notamment la purée Mousline. Carrefour compte quant à lui déployer cette solution d’ici 2020 sur l’ensemble des produits alimentaires Filière Qualité Carrefour, soit 300 références.
     \\
     Assurer la traçabilité des produits représente aussi un avantage majeur en cas d’incident de sécurité alimentaire. Certaines compagnies, prennent parfois plusieurs jours à plusieurs semaines pour retracer leur propre chaine.
     \\
@@ -77,7 +134,7 @@
 
     \chapter{Blockchain dans sa technique}
     \section{Introduction}
-    Nous allons illustrer le fonctionnement de la blockchain avec un exemple : Alice, Bob et Eve qui souhaite mettre en place une méthode sécurisée pour gérer leur argent ainsi que leurs transactions.
+    Nous allons illustrer le fonctionnement de la blockchain avec un exemple : Alice, Bob et Eve qui souhaite mettre en place une méthode sécurisée pour gérer leur argent ainsi que leurs transactions.
 
     \section{Qu'est-ce que la blockchain ?}
     Imaginons un livre dans lequel nous pouvons tout noter. Dans notre exemple, Alice pourra alors y indiquer le montant disponible sur son compte et toutes ses transactions réalisées. Une fois qu’une page est remplie, nous passons simplement à la page suivante.
@@ -88,7 +145,7 @@
     \subsection{Intégrité d'un bloc}
     Il est important que toutes les données stockées dans la blockchain soient intègres, c’est-à-dire qu’il faut être sûr qu’elles n’aient pas été modifiées maladroitement ou par un utilisateur mal intentionné.
     \\
-    Mettons en place notre exemple :
+    Mettons en place notre exemple :
     \begin{enumerate}
         \item Alice, Bob et Eve possèdent tous 10 \euro~sur leur compte et n’ont encore effectué aucune transaction.
         \item Il n'y a aucune mesure de sécurité en place, Eve décide de modifier les données et de voler de l’argent à Alice.
@@ -110,11 +167,11 @@
         \label{fig:test}
     \end{figure}
 
-    Pour remédier à ce problème, une première solution est de hacher le contenu d’un bloc et d’inscrire le résultat dans celui-ci, or un hachage est très rapide à réaliser et donc rien ne pourrait empêcher Eve de modifier les données puis recalculer un nouveau hash. Une modification des informations présentes dans un bloc est donc nécessaire :
+    Pour remédier à ce problème, une première solution est de hacher le contenu d’un bloc et d’inscrire le résultat dans celui-ci, or un hachage est très rapide à réaliser et donc rien ne pourrait empêcher Eve de modifier les données puis recalculer un nouveau hash. Une modification des informations présentes dans un bloc est donc nécessaire :
 
     \begin{itemize}
-        \item En plus des informations déjà présentes, nous avons maintenant le hash du bloc précédent et le hash du bloc actuel : Pour l’obtenir nous hachons la totalité des informations, les transactions, le fichier nonce et le hash du bloc précédent.
-        \item Un nonce est un fichier généré aléatoirement pour que le hash du bloc suive une règle précise (ici commencer par cinq zéros consécutifs). Nous reviendrons plus précisément sur ce sujet dans la partie Proof Of Work.
+        \item En plus des informations déjà présentes, nous avons maintenant le hash du bloc précédent et le hash du bloc actuel : Pour l’obtenir nous hachons la totalité des informations, les transactions, le fichier nonce et le hash du bloc précédent.
+        \item Un nonce est un fichier généré aléatoirement pour que le hash du bloc suive une règle précise (ici commencer par cinq zéros consécutifs). Nous reviendrons plus précisément sur ce sujet dans la partie Proof Of Work.
     \end{itemize}
 
     \begin{figure}[H]
@@ -141,7 +198,7 @@
         \end{center}
     \end{figure}
 
-    Sur le schéma ci-dessus et en considérant que nous sommes encore dans notre exemple :
+    Sur le schéma ci-dessus et en considérant que nous sommes encore dans notre exemple :
 
     \begin{itemize}
         \item Les feuilles (Hash 0-0, Hash 0-1, …) représentent le hash des transactions
@@ -150,7 +207,7 @@
     \end{itemize}
     Si nous vonlons vérifier l’intégrité de la transaction L3 (Hash 1-0), nous devons seulement posséder le hash de son frère (Hash 1-1), celui de son oncle (Hash 0) et enfin la racine (le Top Hash).
     \\
-    Pour cette opération nous devons seulement être sûr de l’intégrité du « Top Hash », c’est pourquoi cette information sera rajoutée au contenu d’un bloc dont l'intégrité a été prouvée dans le point précédent.\cite{merkle}
+    Pour cette opération nous devons seulement être sûr de l’intégrité du « Top Hash », c’est pourquoi cette information sera rajoutée au contenu d’un bloc dont l'intégrité a été prouvée dans le point précédent.\cite{merkle}
 
     \newpage
 
@@ -158,11 +215,11 @@
 
     \subsection{Proof-of-Work}
 
-    Le Proof of Work (PoW ou preuve de travail) est plus communément appelé minage. Les utilisateurs (Alice, Bob et Eve) disposent donc chacun d’une copie de la blockchain et ils ont différentes missions :
+    Le Proof of Work (PoW ou preuve de travail) est plus communément appelé minage. Les utilisateurs (Alice, Bob et Eve) disposent donc chacun d’une copie de la blockchain et ils ont différentes missions :
 
     \begin{itemize}
-        \item Vérifier l’intégrité des blocs et des transactions : Ces opérations sont très rapides il s’agit simplement de vérifier les hashs.
-        \item Créer / ouvrir des nouveaux blocs : Comme nous l’avons vu précédemment cette opération consiste à trouver un fichier « nonce » afin que le hash du bloc respecte certaines règles et donc sécuriser la blockchain. Cela prend énormément de temps de calcul et par conséquent provoque un réel impact écologique (électricité).
+        \item Vérifier l’intégrité des blocs et des transactions : Ces opérations sont très rapides il s’agit simplement de vérifier les hashs.
+        \item Créer / ouvrir des nouveaux blocs : Comme nous l’avons vu précédemment cette opération consiste à trouver un fichier « nonce » afin que le hash du bloc respecte certaines règles et donc sécuriser la blockchain. Cela prend énormément de temps de calcul et par conséquent provoque un réel impact écologique (électricité).
         \newline
     \end{itemize}
 
@@ -259,3 +316,15 @@
  
 % Fin du document
 \end{document}
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
