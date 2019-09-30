@@ -1,20 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@yoanFath 
-2
-00ALudwig57/TD_Blockchain_SSI
- Code Issues 0 Pull requests 0 Projects 0 Wiki Security Insights
-TD_Blockchain_SSI/TD_Blockchain_SSI.tex
- Arnaud Couderc fonctionnement et applications BC
-1a3df47 2 days ago
-261 lines (204 sloc)  16.5 KB
-  
 \documentclass[12pt, a4paper, oneside]{book}
  
 % - taille de la fonte    : 10pt, 11pt, 12pt
@@ -43,56 +26,57 @@ TD_Blockchain_SSI/TD_Blockchain_SSI.tex
     % Le prologue du livre
     \frontmatter
     %\section{Introduction}
+    
+    \tableofcontents
  
     % Corps du livre
     \mainmatter
- 
-    % \chapter{Blockchain point de vue global}
-    % \section{Un chapitre}
-    % \subsection{Une subsection}
-    % \subsubsection{Une sous-subsection}
-    % \subsubsection{Une sous-sous-subsection}
-    % On écrit ici}
 
     \chapter{Introduction à la blockchain}
     \section{Nouvelle technologie - Historique}
-    En 1991 l’architecture de la blockchain à été décrit par les chercheurs Stuart Haber et W. Scott Stornetta lors d’une recherche permettant l’horodatage de documents numériques assurant qu’ils ne soient jamais antidatés ou altérés. 
-En 1992 le protocole « arbre de Merkle » fut utilisé pour combiner plusieurs documents dans un seul bloc. 
+    En 1991 l’architecture de la blockchain a été décrite par les chercheurs Stuart Haber et W. Scott Stornetta lors d’une recherche permettant l’horodatage de documents numériques assurant qu’ils ne soient jamais antidatés ou altérés. 
+En 1992, le protocole « arbre de Merkle » fut utilisé pour combiner plusieurs documents dans un seul bloc. 
 Le brevet déposé expira en 2004, 4 ans avant la création du Bitcoin.
-Le retour de la blockchain à été en 2008 avec la publication d’un livre blanc par un inconnu se présentant sous le pseudonyme Satoshi Nakamoto, son but était d’introduire un système de paiement électronique décentralisé peer-to-peer, le Bitcoin.
+En 2008, la publication d’un livre blanc par un inconnu se présentant sous le pseudonyme Satoshi Nakamoto, signe le retour de la blockchain. Son but était d’introduire un système de paiement électronique décentralisé peer-to-peer, le Bitcoin.
     \section{Qu'est ce que la blockchain ?}
-    La blockchain est une architecture de stockage de données et de transmissions d’informations sécurisée qui fonctionne de manière décentralisée avec des blocs de données reliés entre eux. Elle contient l’historique de toutes les transactions effectuées entre les utilisateurs depuis sa création. 
+    La blockchain est une architecture de stockage de données et de transmissions d’informations sécurisée qui fonctionne de manière décentralisée, avec des blocs de données reliés entre eux. Elle contient l’historique de toutes les transactions effectuées entre les utilisateurs depuis sa création. 
 
 La blockchain utilise un système cryptographique fondé sur un système décentralisé de preuves qui nécessite une puissance de calcul importante fournie par les mineurs, notamment pour ouvrir un nouveau bloc pour y inscrire les données et pour vérifier la validité d’un bloc. Le détail du fonctionnement sera expliqué dans la partie technique.
 
-IMAGE DE LA BLOCKCHAIN
+\begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=.55\textwidth]{images/blockchain.png}
+      \label{fig:chaine}
+      \caption{La blockchain}
+    \end{center}
+\end{figure}
 
-Les intérêts de la blockchain sont que tous les échanges, bien qu’ils soient anonymes consultables ne sont pas modifiable et n’ont pas besoin d’un tiers de confiance, l’ensemble du réseau se charge d’authentifier les transactions avec la méthode de cryptographie utilisée.
+Tous les échanges dans la blockchain sont anonymes consultables, et non modifiables. Il n'y a besoin d'aucun tiers de confiance, l’ensemble du réseau se chargeant d’authentifier les transactions avec la méthode de cryptographie utilisée.
 
 \section{La décentralisation des données}
-    Le fait que la blockchain soit décentralisé et partagée entre ses utilisateurs permet la vérification de l’intégrité de la chaine par n’importe quel utilisateur, même les créateurs n’ont aucun pouvoir unilatéral sur la blockchain (censure) ou la modification du fonctionnement ce qui est totalement différent des applications proposées par exemple des dirigeants des GAFA.
+    Le fait que la blockchain soit décentralisée et partagée entre ses utilisateurs permet la vérification de l’intégrité de la chaine par n’importe quel utilisateur, même les créateurs n’ont aucun pouvoir unilatéral sur la blockchain (censure) ou la modification du fonctionnement, ce qui est totalement différent des applications proposées par exemple, par les GAFAM.
 
-Avec la décentralisation des données l’utilisateur est maitre de ses données personnelles et de son identité numérique, il peut choisir les services qui accèderont à ses donner et en monnayer l’accès, tout en pouvant révoquer l’accès quand il le souhaite. Cela permet de présenter une facette de son identité en fonction du contexte toute son identité. 
+Avec la décentralisation des données, l’utilisateur est maitre de ses données personnelles et de son identité numérique, il peut choisir les services qui accèderont à ses données et en monnayer l’accès, tout en pouvant révoquer ce dernier lorsqu'il le souhaite. Cela permet de présenter une facette de son identité en fonction du contexte. 
 
 \section{Les tokens}
-Toute blockain publique fonctionne obligatoirement avec un jeton : « le Token » qui est programmable et personnalisable pour représenter ce qui sera échangé. Cela peut être une cryptomonnaie, un droit d’usage, un droit de payement, une réputation… Cela peut vraiment prendre n’importe quelle forme et c’est ce qui sera utilisé et échangé en peer-to-peer sans duplication sur la blockchain.
+Toute blockchain publique fonctionne obligatoirement avec un jeton : « le Token ». Il est programmable et personnalisable pour représenter ce qui sera échangé. Cela peut être une cryptomonnaie, un droit d’usage, un droit de payement, une réputation… Cela peut vraiment prendre n’importe quelle forme et c’est ce qui sera utilisé et échangé en peer-to-peer sans duplication sur la blockchain.
 Ce token peut être acheté et vendu n’importe quand en fonction de l’offre et de la demande sur une plateforme d’échange, son prix n’est jamais fixe mais varie tout le temps. 
 
 Un token conserve toute les caractéristiques d’une cryptomonnaie : infalsifiable, enregistrement de la transaction dans un bloc immuable, sécurité des échanges.
 
 \section{Le Bitcoin et les cryptomonnaies dans tout ça ?}
 La première blockchain qui s’est développée en 2009 est un système de payement qui utilise une cryptomonnaie comme token : le bitcoin. 
-A chaque transaction réalisée les agents qui traitent et vérifient les transactions sont rétribué, ce sont les mineurs. Le fait de miner consiste à vérifier, sécuriser et enregistrer une transaction et des bitcoins sont généré dans le système à chaque minage.
- Le système à une limite de 21 millions d’unités sur le marché et d’après les estimations ce cap sera atteint d’ici 2050, ce rendra le bitcoin encore plus rare car limité. Le bitcoin, comme toute cryptomonnaie peut être échangé sur des places de marchés avec la loi de l’offre et de la demande, ce qui peut grandement faire varier le prix comme en 2017 lorsque le prix du bitcoin a explosé dû à la demande.
+A chaque transaction réalisée les agents qui traitent et vérifient les transactions sont rétribués, ce sont les mineurs. Le fait de miner consiste à vérifier, sécuriser et enregistrer une transaction et des bitcoins sont générés dans le système à chaque minage.
+ Le système à une limite de 21 millions d’unités sur le marché et d’après les estimations, ce cap sera atteint d’ici 2050, ceci rendra le bitcoin encore plus rare car limité. Le bitcoin, comme toute cryptomonnaie peut être échangé sur des places de marchés avec la loi de l’offre et de la demande, ce qui peut grandement faire varier le prix comme en 2017 lorsque le prix du bitcoin a explosé dû à la demande.
 
-Le bitcoin prend une place importante sur le marché car le nombre de commerçants qui acceptent les bitcoins augmentent petit à petit, comme Microsoft ou Steam pendant un temps mais qui ont retiré cette option ensuite.
+Le bitcoin prend une place importante sur le marché car le nombre de commerçants qui acceptent les bitcoins augmentent petit à petit, comme Microsoft ou Steam pendant un temps, cette possibilité ayant était supprimée depuis.
 
 \section{Les 3 types de blockchain}
 
-Il existe 3 types de blockchain, la blockchain publique où tout le monde peut effectuer ou vérifier les transactions, la blockchain privée nécessite une autorisation pour y accéder, elles sont utilisées notamment lors des expérimentations.
-Enfin il y a les consortiums, ce sont des blockchains hybride. // A FINIR
+Il existe 3 types de blockchain, la blockchain publique où tout le monde peut effectuer ou vérifier les transactions, la blockchain privée, qui nécessite une autorisation pour y accéder, elles sont utilisées notamment lors des expérimentations.
+Enfin il y a les consortiums, ce sont des blockchains hybrides.
 
-    
+     % A FINIR
     
     \chapter{Les applications de la blockchain}
 
@@ -307,9 +291,6 @@ Enfin il y a les consortiums, ce sont des blockchains hybride. // A FINIR
     \backmatter
  
     % \section{Conclusion et discussion}
- 
-    
-    \tableofcontents
 
     \bibliographystyle{unsrt}
     \bibliography{TD_SSI_biblio}
