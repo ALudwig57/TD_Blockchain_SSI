@@ -132,6 +132,9 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
     La blockchain fonctionne sur ce même principe sauf qu’en réalité les pages sont appelées des blocs, et qu’une fois le nombre de transaction maximal atteint, nous ouvrons un nouveau bloc.
 
     \section{Fonctionnement de la blockchain}
+    
+    \subsection{Disponibilité de la blockchain}
+    
     \subsection{Intégrité d'un bloc}
     Il est important que toutes les données stockées dans la blockchain soient intègres, c’est-à-dire qu’il faut être sûr qu’elles n’aient pas été modifiées maladroitement ou par un utilisateur mal intentionné.
     \\
@@ -204,8 +207,23 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
     Pour cette opération nous devons seulement être sûr de l’intégrité du « Top Hash », c’est pourquoi cette information sera rajoutée au contenu d’un bloc dont l'intégrité a été prouvée dans le point précédent.\cite{merkle}
 
     \newpage
-
-    \subsection{Disponibilité de la blockchain}
+    
+    \subsection {Confidentialité de la blockchain}
+    La confidentialité correspond à la protection des données. En d’autres termes si nous lions ça à la blockchain, cela signifie que la transaction et l’identité des participants doivent être protégés. 
+    \\
+    Reprenons notre exemple : 
+    \\
+    Nos deux amis Alice et Bob possèdent 10€ sur leur compte et Bob souhaite envoyer 5€ à Alice. 
+    \\
+    Si nous voulons que leur transaction soit confidentielle. Il faut que Eve soit incapable d’identifier que Alice et Bob se sont échangés de l’argent, ainsi que le montant. Sauf si Alice et Bob décident volontairement de révéler ces informations. 
+    \\
+    Il faut savoir que dans la blockchain toutes les transactions sont publiques. Ainsi Eve peut facilement avoir accès à la transaction, pour peu qu’elle ne soit pas encryptée. Ce qui est le cas de beaucoup de transactions publiques. 
+    \\
+    Voici un exemple de transaction tiré de blockchain.com : nous savons les adresses publiques des acteurs de la transaction, ainsi que la date et le montant de la transaction. Le montant que possède ces deux adresses dans leur portefeuille est aussi disponible. 
+    \\
+    Si l’on veut que la transaction soit confidentielle. Il faut donc que Bob encrypte les informations de celle-ci avec la clé publique de Alice. Afin que seul Alice puisse décrypter la transaction avec sa clé privée. 
+    \\
+    Le problème du cryptage, c’est qu’il rompt l’un des principes fondamentaux de la blockchain, la transparence. C’est pourquoi pour le moment les transactions des blockchains publiques ne sont pas confidentielles. Comme nous avons d’ailleurs pu le voir sur l’image ci-dessus. Il s’agit d’ailleurs d’un sujet actif de recherche. 
 
     \subsection{Proof-of-Work}
 
