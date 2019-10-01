@@ -14,6 +14,8 @@
 \usepackage{eurosym}
 \usepackage{float}
 
+\DeclareUnicodeCharacter{202F}{FIX ME!!!!}
+
 % Informations le titre, le(s) auteur(s), la date
 \title{La Blockchain}
 \author{ Jordan Sagnes, Alexandre Ludwig, Yoan Fath, \\ Julien Pignolet et Arnaud Couderc}
@@ -207,16 +209,30 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
     \subsection {Confidentialité de la blockchain}
     La confidentialité correspond à la protection des données. En d’autres termes si nous lions ça à la blockchain, cela signifie que la transaction et l’identité des participants doivent être protégés. 
     \\
-    Reprenons notre exemple : 
+    Reprenons notre exemple :
+    Nos deux amis Alice et Bob possèdent 10 \euro~sur leur compte et Bob souhaite envoyer 5 \euro~à Alice. 
     \\
-    Nos deux amis Alice et Bob possèdent 10€ sur leur compte et Bob souhaite envoyer 5€ à Alice. 
-    \\
-    Si nous voulons que leur transaction soit confidentielle. Il faut que Eve soit incapable d’identifier que Alice et Bob se sont échangés de l’argent, ainsi que le montant. Sauf si Alice et Bob décident volontairement de révéler ces informations. 
+    Si nous voulons que leur transaction soit confidentielle, il faut que Eve soit incapable d’identifier que Alice et Bob se sont échangés de l’argent, ainsi que le montant. Sauf si Alice et Bob décident volontairement de révéler ces informations. 
     \\
     Il faut savoir que dans la blockchain toutes les transactions sont publiques. Ainsi Eve peut facilement avoir accès à la transaction, pour peu qu’elle ne soit pas encryptée. Ce qui est le cas de beaucoup de transactions publiques. 
     \\
-    Voici un exemple de transaction tiré de blockchain.com : nous savons les adresses publiques des acteurs de la transaction, ainsi que la date et le montant de la transaction. Le montant que possède ces deux adresses dans leur portefeuille est aussi disponible. 
-    \\
+    Voici un exemple de transaction tiré de blockchain.com : nous savons les adresses publiques des acteurs de la transaction, ainsi que la date et le montant de la transaction. Le montant que possède ces deux adresses dans leur portefeuille est aussi disponible.
+
+    \begin{figure}[H]
+        \begin{center}
+          \includegraphics[width=\textwidth]{images/portefeuille.png}
+          \label{fig:arbre}
+        \end{center}
+    \end{figure}
+
+    \begin{figure}[H]
+        \begin{center}
+          \includegraphics[width=\textwidth]{images/transaction.png}
+          \label{fig:arbre}
+        \end{center}
+    \end{figure}
+
+    %\\
     Si l’on veut que la transaction soit confidentielle. Il faut donc que Bob encrypte les informations de celle-ci avec la clé publique de Alice. Afin que seul Alice puisse décrypter la transaction avec sa clé privée. 
     \\
     Le problème du cryptage, c’est qu’il rompt l’un des principes fondamentaux de la blockchain, la transparence. C’est pourquoi pour le moment les transactions des blockchains publiques ne sont pas confidentielles. Comme nous avons d’ailleurs pu le voir sur l’image ci-dessus. Il s’agit d’ailleurs d’un sujet actif de recherche. 
@@ -249,10 +265,18 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
     \\
     Cette attaque a été rendue possible car la puissance de calcul nécessaire était tellement négligeable que cela ne coutait que 4500 \$ par heure.\cite{51ETC}
 
-    \section{Le naufrage \emph{The DAO}}
+    \section{La réentrance}
 
-    
-
+    C'est la plus connue des vulnérabilités de la blockchain Ethereum de l'époque. Elle a supris tout le monde et a mené à un \emph{hard fork}\footnote{grosse modification}. La réentrance survient lorsque des appels de contrat externes sont autorisés à passer de nouveaux appels au contrat appelant avant la fin de l'exécution initiale. Pour une fonction, cela signifie que l'état du contrat peut changer en cours d'exécution à la suite d'un appel à un contrat non approuvé ou de l'utilisation d'une fonction de bas niveau avec une adresse externe.
+    \newline
+    Voici un exemple de réentrance :
+    \begin{itemize}
+        \item Un smart contract suit le solde d'un certain nombre d'adresses externes et permet aux utilisateurs de récupérer des fonds avec sa fonction publique \emph{withdraw()}.
+        \item Un smart contract malveillant utilise \emph{withdraw()} pour récupérer la totalité de son solde
+        \item Le contrat victime execute la fonction de bas niveau \emph{call.value(amount)()} pour envoyer les ethers au contrat malveillant avant de mettre à jour le solde de ce dernier
+        \item Le contrat malveillant a une fonction \emph{fallback()} qui accepte les fonds puis rappelle la fonction \emph{withdraw()} du contrat victime.
+        \item La seconde execution active un transfert de fonds. Pour rappel, le solde du contrat malveillant n'a pas encore été mise à jour depuis le premier retrait (withdraw). Donc le contrat malveillant retire une seconde fois la totalité de son solde.
+    \end{itemize}
     \chapter{Point de vue légalité}
     \section{La blockchain et la protection des données}
     \subsection{L'incompatibilité avec la RGPD}
