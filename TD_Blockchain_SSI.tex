@@ -4,15 +4,17 @@
 % - recto ou recto-verso    : oneside, twoside
  
 % Chargement d'extensions
-\usepackage[utf8]{inputenc}    
-\usepackage[francais]{babel}    
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{french}
 \usepackage[margin=1in]{geometry}
-\usepackage{hyperref}
+\usepackage{url}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{eurosym}
 \usepackage{float}
+\usepackage{dirtytalk}
 
 \DeclareUnicodeCharacter{202F}{FIX ME!!!!}
 
@@ -20,24 +22,25 @@
 \title{La Blockchain}
 \author{ Jordan Sagnes, Alexandre Ludwig, Yoan Fath, \\ Julien Pignolet et Arnaud Couderc}
 \date{\today}
+
  
 \begin{document}
- 
 \maketitle
  
     % Le prologue du livre
     \frontmatter
+    
     %\section{Introduction}
     
     \tableofcontents
- 
+    \thispagestyle{empty}
     % Corps du livre
     \mainmatter
 
     \chapter{Introduction à la blockchain}
     \section{Nouvelle technologie - Historique}
     En 1991 l’architecture de la blockchain a été décrite par les chercheurs Stuart Haber et W. Scott Stornetta lors d’une recherche permettant l’horodatage de documents numériques assurant qu’ils ne soient jamais antidatés ou altérés. 
-En 1992, le protocole « arbre de Merkle » fut utilisé pour combiner plusieurs documents dans un seul bloc. 
+En 1992, le protocole \say{ arbre de Merkle } fut utilisé pour combiner plusieurs documents dans un seul bloc. 
 Le brevet déposé expira en 2004, 4 ans avant la création du Bitcoin.
 En 2008, la publication d’un livre blanc par un inconnu se présentant sous le pseudonyme Satoshi Nakamoto, signe le retour de la blockchain. Son but était d’introduire un système de paiement électronique décentralisé peer-to-peer, le Bitcoin.
     \section{Qu'est-ce que la blockchain ?}
@@ -48,7 +51,7 @@ La blockchain est un système décentralisé, fondé sur le principe de preuves.
 \begin{figure}[H]
     \begin{center}
       \includegraphics[width=.55\textwidth]{images/blockchain.png}
-      \label{fig:chaine}
+      \label{fig:blockchain}
       \caption{La blockchain}
     \end{center}
 \end{figure}
@@ -61,7 +64,7 @@ Tous les échanges dans la blockchain sont anonymes, consultables, et non modifi
 Avec la décentralisation des données, l’utilisateur est maître de ses données personnelles et de son identité numérique, il peut choisir les services qui accèderont à ses données et en monnayer l’accès, tout en pouvant révoquer ce dernier lorsqu'il le souhaite. Cela permet de présenter une facette de son identité en fonction du contexte. 
 
 \section{Les tokens}
-Toute blockchain publique fonctionne obligatoirement avec un jeton : « le Token ». Il est programmable et personnalisable pour représenter ce qui sera échangé. Cela peut être une cryptomonnaie, un droit d’usage, un droit de paiement, une réputation… Cela peut prendre n’importe quelle forme et c’est ce qui sera utilisé et échangé en peer-to-peer sans duplication sur la blockchain.
+Toute blockchain publique fonctionne obligatoirement avec un jeton : \say{ le Token }. Il est programmable et personnalisable pour représenter ce qui sera échangé. Cela peut être une cryptomonnaie, un droit d’usage, un droit de paiement, une réputation… Cela peut prendre n’importe quelle forme et c’est ce qui sera utilisé et échangé en peer-to-peer sans duplication sur la blockchain.
 Ce token peut être acheté et vendu n’importe quand en fonction de l’offre et de la demande sur une plateforme d’échange, son prix n’est jamais fixe mais varie tout le temps. 
 
 Un token conserve toute les caractéristiques d’une cryptomonnaie : infalsifiable, enregistrement de la transaction dans un bloc immuable, sécurité des échanges.
@@ -94,8 +97,8 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
     
     \begin{figure}[H]
         \begin{center}
-          \includegraphics[width=.43\textwidth]{images/billard.jpg}
-          \label{fig:chaine}
+          \includegraphics[width=.32\textwidth]{images/billard.jpg}
+          \label{fig:billard}
           \caption{Miniclip’s 8-Ball Pool : Un jeu mobile qui pourrait utiliser la blockchain}
         \end{center}
     \end{figure}
@@ -108,18 +111,20 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
     \\
     Le postulat de base est simple. Les consommateurs n’ont jamais eu autant de choix dans la diversité de leurs aliments. Pourtant d’après IBM, 84\% des acheteurs considèrent au moment de leur achat, où et comment ont été produits les aliments. C’est là que la blockchain peut être décisive dans un milieu aussi compétitif puisqu'elle permet une transparence totale de la chaîne d’approvisionnement et de la fabrication, toujours grâce à l’aspect infalsifiable du registre de transaction.
     \\
-    D’après Nestlé, cela permet de « renforcer le lien de confiance avec ses consommateurs ». C’est pourquoi ces derniers appliquent cette solution sur 15 de leurs produits phares, notamment la purée Mousline. Carrefour compte quant à lui déployer cette solution d’ici 2020 sur l’ensemble des produits alimentaires Filière Qualité Carrefour, soit 300 références.
+    D’après Nestlé, cela permet de \say{ renforcer le lien de confiance avec ses consommateurs }. C’est pourquoi ces derniers appliquent cette solution sur 15 de leurs produits phares, notamment la purée Mousline. Carrefour compte quant à lui déployer cette solution d’ici 2020 sur l’ensemble des produits alimentaires Filière Qualité Carrefour, soit 300 références.
     \\
     Assurer la traçabilité des produits représente aussi un avantage majeur en cas d’incident de sécurité alimentaire. Certaines compagnies, prennent parfois plusieurs jours à plusieurs semaines pour retracer leur propre chaine.
     \\
     En généralisant, la plus grosse vulnérabilité de la chaîne d’approvisionnement est le manque de transparence car c'est une porte ouverte vers la fraude et la corruption (exemple de la fraude sur l’étiquetage faisant passer de la viande de cheval pour de la viande de bœuf), problème qui est résolu par la blockchain.
 
     \section{Les Smart Contracts}
-    Les smart contracts constituent l’un des types d’usage les plus prometteurs de la blockchain. Concrètement, il s’agit d’un programme informatique qui exécute automatiquement des conditions définies au préalable et inscrites dans la blockchain. Un smart contract est beaucoup plus simple qu’il n’y paraît. Il fonctionne comme toute instruction « if – then ». 
+    Les smart contracts constituent l’un des types d’usage les plus prometteurs de la blockchain. Concrètement, il s’agit d’un programme informatique qui exécute automatiquement des conditions définies au préalable et inscrites dans la blockchain. Un smart contract est beaucoup plus simple qu’il n’y paraît. Il fonctionne comme toute instruction \say{ if – then }. 
     \\
+    \indent
     Pour illustrer, saviez-vous que 60\% des passagers assurés contre le retard de leur vol ne revendiquaient jamais leur argent ? C’est à partir de ce constat qu’un système d’assurance automatisé basé sur les smart contracts est né. AXA est l’un des premiers grands groupes d’assurance à l’adopter. Le principe ? Les passagers sont automatiquement indemnisés lorsque leur vol est en retard, sans avoir besoin de remplir un quelconque formulaire, et donc sans que l’entreprise ne doive traiter les demandes. Pour se déclencher le smart contract se connecte à une base de données supposée fiable, dans le cas présent la base de données de l’aéroport.
     Le smart contract est indissociable de la blockchain. Car c’est cette dernière qui permet de se passer d’un tier de confiance pour les phases déclaratives.
     \\
+    \indent~
     L’avantage des smarts contracts c’est, qu’une fois inscrits dans la blockchain, les termes du contrat ne pourront plus être modifiés. On retrouve encore une fois l’aspect indissociable de la blockchain. Car un smart contract qui ne serait pas dans la blockchain serait un programme dont les termes pourraient être changés en cours d’exécution.
     Les smarts contracts permettent aussi de réduire les coûts de vérification, d’exécution, d’arbitrage et de fraude. Tout est automatisé donc plus aucune erreur humaine n’est possible, sauf au moment d’établir le contrat.
 
@@ -135,12 +140,18 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
 
     \section{Fonctionnement de la blockchain}
     
-    \subsection{Disponibilité de la blockchain}
+    %\subsection{Disponibilité de la blockchain}
     
     \subsection{Intégrité d'un bloc}
     Il est important que toutes les données stockées dans la blockchain soient intègres, c’est-à-dire qu’il faut être sûr qu’elles n’aient pas été modifiées maladroitement ou par un utilisateur mal intentionné.
     \\
     Mettons en place notre exemple :
+
+    \begin{enumerate}
+        \item Alice, Bob et Eve possèdent tous 10 \euro~sur leur compte et n’ont encore effectué aucune transaction.
+        \item Il n'y a aucune mesure de sécurité en place, Eve décide de modifier les données et de voler de l’argent à Alice. 
+        \newline
+    \end{enumerate} 
 
     \begin{figure}[H]
         \centering
@@ -158,13 +169,10 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
         \label{fig:test}
     \end{figure}
 
-    \begin{enumerate}
-        \item Alice, Bob et Eve possèdent tous 10 \euro~sur leur compte et n’ont encore effectué aucune transaction.
-        \item Il n'y a aucune mesure de sécurité en place, Eve décide de modifier les données et de voler de l’argent à Alice. 
-        \newline
-    \end{enumerate} 
-
-    Pour remédier à ce problème, une première solution est de hacher le contenu d’un bloc et d’inscrire le résultat dans celui-ci, or un hachage est très rapide à réaliser et donc rien ne pourrait empêcher Eve de modifier les données puis recalculer un nouveau hash. Une modification des informations présentes dans un bloc est donc nécessaire :
+    Pour remédier à ce problème, une première solution est de hacher le contenu d’un bloc et d’inscrire le résultat dans celui-ci, or un hachage est très rapide à réaliser et donc rien ne pourrait empêcher Eve de modifier les données puis recalculer un nouveau hash.
+    \\
+    \\
+    Une modification des informations présentes dans un bloc est donc nécessaire :
 
     \begin{figure}[H]
         \begin{center}
@@ -173,11 +181,11 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
           \caption{Une chaine de bloc : un bloc est lié à son prédecesseur par le hash de ce dernier.}
         \end{center}
     \end{figure}
+    \newpage
 
     \begin{itemize}
         \item En plus des informations déjà présentes, nous avons maintenant le hash du bloc précédent et le hash du bloc actuel : Pour l’obtenir nous hachons la totalité des informations, les transactions, le fichier nonce et le hash du bloc précédent.
         \item Un nonce est un fichier généré aléatoirement pour que le hash du bloc suive une règle précise (ici commencer par cinq zéros consécutifs). Nous reviendrons plus précisément sur ce sujet dans la partie Proof Of Work.
-        \newline
     \end{itemize}
 
 
@@ -186,7 +194,7 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
     \subsection{Intégrité du contenu d’un bloc}
 
     Dans la partie précédente nous avons vu comment nous assurer que les blocs sont intègres. Mais comment savoir avant d’ajouter des transactions dans un bloc que celles-ci n’ont pas été modifiées ?
-    \newline
+    
     Pour cela nous allons utiliser un arbre de Merkle, il s’agit d’un arbre de hachage binaire, son but est donc de vérifier l’intégrité d’un groupe de données (ici des transactions) sans devoir nécessairement utiliser toutes les données disponibles dans un bloc.
 
     \begin{figure}[H]
@@ -196,8 +204,8 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
           \caption{Un arbre de Merkle appliqué à la blockchain.}
         \end{center}
     \end{figure}
-
-    Sur le schéma ci-dessus et en considérant que nous sommes encore dans notre exemple :
+    \newpage
+    \noindent~Sur le schéma ci-dessus et en considérant que nous sommes encore dans notre exemple :
 
     \begin{itemize}
         \item Les feuilles (Hash 0-0, Hash 0-1, …) représentent le hash des transactions
@@ -205,40 +213,39 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
         \newline
     \end{itemize}
     Si nous voulons vérifier l’intégrité de la transaction L3 (Hash 1-0), nous devons seulement posséder le hash de son frère (Hash 1-1), celui de son oncle (Hash 0) et enfin la racine (le Top Hash).
-    \\
-    Pour cette opération nous devons seulement être sûr de l’intégrité du « Top Hash », c’est pourquoi cette information sera rajoutée au contenu d’un bloc dont l'intégrité a été prouvée dans le point précédent.\cite{merkle}
-
-    \newpage
+    
+    Pour cette opération nous devons seulement être sûr de l’intégrité du \say{ Top Hash }, c’est pourquoi cette information sera rajoutée au contenu d’un bloc dont l'intégrité a été prouvée dans le point précédent.\cite{merkle}
     
     \subsection {Confidentialité de la blockchain}
     La confidentialité correspond à la protection des données. En d’autres termes si nous lions ça à la blockchain, cela signifie que la transaction et l’identité des participants doivent être protégés. 
-    \\
+    
     Reprenons notre exemple :
     Nos deux amis Alice et Bob possèdent 10 \euro~sur leur compte et Bob souhaite envoyer 5 \euro~à Alice. 
-    \\
+    
     Si nous voulons que leur transaction soit confidentielle, il faut que Eve soit incapable d’identifier que Alice et Bob se sont échangés de l’argent, ainsi que le montant. Sauf si Alice et Bob décident volontairement de révéler ces informations. 
-    \\
+    
     Il faut savoir que dans la blockchain toutes les transactions sont publiques. Ainsi Eve peut facilement avoir accès à la transaction, pour peu qu’elle ne soit pas encryptée. Ce qui est le cas de beaucoup de transactions publiques. 
-    \\
+    
     Voici un exemple de transaction tiré de blockchain.com : nous savons les adresses publiques des acteurs de la transaction, ainsi que la date et le montant de la transaction. Le montant que possède ces deux adresses dans leur portefeuille est aussi disponible.
 
     \begin{figure}[H]
         \begin{center}
           \includegraphics[width=\textwidth]{images/portefeuille.png}
-          \label{fig:arbre}
+          \label{fig:portefeuille}
+          \caption{Un portefeuille Bitcoin}
         \end{center}
     \end{figure}
 
     \begin{figure}[H]
         \begin{center}
-          \includegraphics[width=\textwidth]{images/transaction.png}
-          \label{fig:arbre}
+          \includegraphics[width=.9\textwidth]{images/transaction.png}
+          \label{fig:transaction}
+          \caption{Une transaction Bitcoin}
         \end{center}
     \end{figure}
 
-    %\\
     Si l’on veut que la transaction soit confidentielle. Il faut donc que Bob encrypte les informations de celle-ci avec la clé publique de Alice. Afin que seul Alice puisse décrypter la transaction avec sa clé privée. 
-    \\
+    
     Le problème du cryptage, c’est qu’il rompt l’un des principes fondamentaux de la blockchain, la transparence. C’est pourquoi pour le moment les transactions des blockchains publiques ne sont pas confidentielles. Comme nous avons d’ailleurs pu le voir sur l’image ci-dessus. Il s’agit d’ailleurs d’un sujet actif de recherche. 
 
     \subsection{Proof-of-Work}
@@ -247,13 +254,13 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
 
     \begin{itemize}
         \item Vérifier l’intégrité des blocs et des transactions : Ces opérations sont très rapides il s’agit simplement de vérifier les hashs.
-        \item Créer / ouvrir des nouveaux blocs : Comme nous l’avons vu précédemment cette opération consiste à trouver un fichier « nonce » afin que le hash du bloc respecte certaines règles et donc sécuriser la blockchain. Cela prend énormément de temps de calcul et par conséquent provoque un réel impact écologique (électricité).
+        \item Créer / ouvrir des nouveaux blocs : Comme nous l’avons vu précédemment cette opération consiste à trouver un fichier \say{ nonce } afin que le hash du bloc respecte certaines règles et donc sécuriser la blockchain. Cela prend énormément de temps de calcul et par conséquent provoque un réel impact écologique (électricité).
         \newline
     \end{itemize}
 
     Lorsqu’un mineur trouve un nonce correct, il le diffuse sur le réseau, les autres mineurs vérifient ce fichier et selon sa validité le mineur est alors récompensé, en effet il va percevoir tous les frais de transactions du bloc.
 
-    \chapter{Les failles / types d'attaques + exemples connus}
+    \chapter{Risques, vulnérabilités et attaques sur la blockchain}
     La blockchain n'est pas inviolable, mais comme souvent, les failles présentes sont dûes à des erreurs d'implémentations ou à des négligences. La seule attaque ne se basant pas sur ces vulnérabilités est appelée \emph{Attaque 51}.
     \section{Attaque 51}
     La blockchain se basant sur le principe de consensus, si un groupe de personne possède plus de 50 \% de la capacité de calcul, elle crée un autre consensus qui peut être faussé par l'introduction de blocs corrompus qui annuleraient des transactions par exemple. De ce fait, on peut modifier la blockchain et la faire plus longue que celle calculée par le reste du réseau, ce qui la rendrait légitime par tout le réseau.
@@ -269,10 +276,12 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
     \\
     Cette attaque a été rendue possible car la puissance de calcul nécessaire était tellement négligeable que cela ne coutait que 4500 \$ par heure.\cite{51ETC}
 
-    \section{La réentrance}
+    \section[Vulnérabilités des smart contracts]{Vulnérabilités des smart contracts~\cite{dasp}}
+    \subsection{Réentrance}
 
     C'est la plus connue des vulnérabilités de la blockchain Ethereum de l'époque. Elle a supris tout le monde et a mené à un \emph{hard fork}\footnote{grosse modification}. La réentrance survient lorsque des appels de contrat externes sont autorisés à passer de nouveaux appels au contrat appelant avant la fin de l'exécution initiale. Pour une fonction, cela signifie que l'état du contrat peut changer en cours d'exécution à la suite d'un appel à un contrat non approuvé ou de l'utilisation d'une fonction de bas niveau avec une adresse externe.
-    \newline
+    \\
+    \\
     Voici un exemple de réentrance :
     \begin{itemize}
         \item Un smart contract suit le solde d'un certain nombre d'adresses externes et permet aux utilisateurs de récupérer des fonds avec sa fonction publique \emph{withdraw()}.
@@ -281,6 +290,48 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
         \item Le contrat malveillant a une fonction \emph{fallback()} qui accepte les fonds puis rappelle la fonction \emph{withdraw()} du contrat victime.
         \item La seconde execution active un transfert de fonds. Pour rappel, le solde du contrat malveillant n'a pas encore été mise à jour depuis le premier retrait (withdraw). Donc le contrat malveillant retire une seconde fois la totalité de son solde.
     \end{itemize}
+
+    \subsection{Attaque frontale}
+
+    Comme les mineurs sont récompensés par des frais de transaction pour l'exécution de code pour le compte d'adresses appartenant à des tiers, les utilisateurs peuvent spécifier des frais plus élevés. La blockchain Ethereum étant publique, tout le monde peut voir le contenu des transactions en attente. Si un utilisateur révèle une solution à un casse-tête ou un secret précieux, un utilisateur malveillant peut voler la solution et copier sa transaction avec des frais plus élevés afin de prendre la place de la solution d'origine. Un algorithme d'attaque frontale fait environ 150 lignes en Python.
+    \newpage
+    Voici un exemple d'attaque frontale :
+
+    \begin{itemize}
+        \item Un smart contract publie un nombre RSA ($N = p1 * p2$).
+        \item Un appel à sa foncion \emph{submitSolution()} avec les bons \emph{p}1 et \emph{p}2 récompense l'expéditeur.
+        \item Alice factorise le nombre RSA et soumet une solution.
+        \item Quelqu'un sur le réseau voit la transactionb d'Alice (contenant la solution) en attente d'être minée et soumet cette même solution avec des frais plus élevés.
+        \item La seconde transaction est choisie par les mineurs puisqu'elle possède des frais plus élevés. L'attaquant a gagné.
+    \end{itemize}
+
+    \subsection{Modification de l'heure}
+
+    Qu'il s'agisse de bloquer une vente de jetons ou de déverrouiller des fonds à une heure précise pour un jeu, les contrats doivent parfois compter sur l'heure actuelle. Cela se fait généralement via \emph{block.timestamp} ou son alias \emph{now} dans Solidity. Mais cette valeur vient... des mineurs! Étant donné que le mineur d'une transaction a une marge de manœuvre pour signaler l'heure à laquelle l'extraction a eu lieu, des smart contracts s'appuyant fortement sur l'heure sont vulnérables.
+    \\
+    \\
+    Voici un exemple de modification d'heure :
+
+    \begin{itemize}
+        \item Un jeu paye le tout premier joueur à minuit aujourd'hui.
+        \item Un mineur malveillant inclut sa tentative de gagner le jeu et règle l'horodatage à minuit.
+        \item Un peu avant minuit, le mineur finit par miner le bloc. L'heure actuelle est \say{assez proche de minuit}, les autres noeuds du réseau acceptent le bloc.
+    \end{itemize}
+
+    \subsection{Autres vulnérabilités}
+
+    Les autres vulnérabilités concernant les smart contracts sont assez communs avec tous les systèmes informatiques :
+
+    \begin{itemize}
+        \item Contrôles d'accès insuffisants
+        \item Buffer overflow
+        \item DDoS
+    \end{itemize}
+
+    % \subsection{Contrôle d'accès}
+
+    % Les problèmes de contrôle d'accès sont communs à tous les programmes informatiques, et pas seulement aux smart contracts. On accède généralement aux fonctionnalités d'un contrat par le biais de ses fonctions publiques ou externes. Bien que les paramètres de visibilité non sécurisés offrent aux attaquants des moyens simples d'accéder aux valeurs privées ou à la logique d'un contrat, les contournements du contrôle d'accès sont parfois plus subtils. Ces vulnérabilités peuvent survenir lorsque les contrats utilisent le code obsolète \emph{tx.origin} pour valider les appelants, gérer une logique d’autorisation volumineuse et faire un usage inconsidéré de \emph{delegatecall} dans des bibliothèques ou des contrats de proxy.
+
     \chapter{Point de vue légalité}
     \section{La blockchain et la protection des données}
     \subsection{L'incompatibilité avec la RGPD}
@@ -309,8 +360,8 @@ Enfin il y a les consortiums, ce sont des blockchains hybrides.
 
     \section{Rapport d'activité de 2018 de l'ANSSI}
 
-    Le 15 avril 2019, l'ANSSI a publié son rapport d'activités de 2018, intitulé \textit{"Construire ensemble la confiance 
-    numerique de demain"}. 
+    Le 15 avril 2019, l'ANSSI a publié son rapport d'activités de 2018, intitulé \say{Construire ensemble la confiance 
+    numerique de demain}. 
     Dans ce rapport, L'ANSSI met en avant 5 types de cybermenaces, dont une qui viserait à générer de façon frauduleuse des 
     cryptomonnaies. Par conséquent, l'ANSSI considère que la sécurité absolue des blockchains n'est qu'un mythe.
     \cite{anssi2018}
