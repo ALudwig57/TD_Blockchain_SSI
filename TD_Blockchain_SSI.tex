@@ -293,7 +293,9 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     \section[Vulnérabilités des smart contracts]{Vulnérabilités des smart contracts~\cite{dasp}}
     \subsection{Réentrance}
 
-    C'est la plus connue des vulnérabilités de la blockchain Ethereum de l'époque. Elle a surpris tout le monde et a mené à un \emph{hard fork}\footnote{grosse modification}. La réentrance survient lorsque des appels de contrat externes sont autorisés à passer de nouveaux appels au contrat appelant avant la fin de l'exécution initiale. Pour une fonction, cela signifie que l'état du contrat peut changer en cours d'exécution à la suite d'un appel à un contrat non approuvé ou de l'utilisation d'une fonction de bas niveau avec une adresse externe.
+    C'est la plus connue des vulnérabilités de la blockchain Ethereum de l'époque. Elle a supris tout le monde et a mené à un \emph{hard fork}\footnote{grosse modification} de cette blockchain. C'est cette vulnérabilité qui a entraîné la chute de The DAO.
+    \\
+    La réentrance survient lorsque des appels de contrat externes sont autorisés à passer de nouveaux appels au contrat appelant avant la fin de l'exécution initiale. Pour une fonction, cela signifie que l'état du contrat peut changer en cours d'exécution à la suite d'un appel à un contrat non approuvé ou de l'utilisation d'une fonction de bas niveau avec une adresse externe.
     \\
     \\
     Voici un exemple de réentrance :
