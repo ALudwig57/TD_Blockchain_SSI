@@ -67,7 +67,7 @@ Avec la décentralisation des données, l’utilisateur est maître de ses donn�
 Toute blockchain publique fonctionne obligatoirement avec un jeton : \say{ le Token }. Il est programmable et personnalisable pour représenter ce qui sera échangé. Cela peut être une cryptomonnaie, un droit d’usage, un droit de paiement, une réputation… Cela peut prendre n’importe quelle forme et c’est ce qui sera utilisé et échangé en peer-to-peer sans duplication sur la blockchain.
 Ce token peut être acheté et vendu n’importe quand en fonction de l’offre et de la demande sur une plateforme d’échange, son prix n’est jamais fixe mais varie tout le temps. 
 
-Un token conserve toute les caractéristiques d’une cryptomonnaie : infalsifiable, enregistrement de la transaction dans un bloc immuable, sécurité des échanges.
+Un token conserve toutes les caractéristiques d’une cryptomonnaie : infalsifiable, enregistrement de la transaction dans un bloc immuable, sécurité des échanges.
 
 \section{Le Bitcoin et les cryptomonnaies dans tout ça ?}
 La première blockchain qui s’est développée en 2009 est un système de paiement qui utilise une cryptomonnaie comme token : le bitcoin. 
@@ -204,7 +204,7 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     \end{itemize}
 
 
-    Maintenant, si Eve tente de modifier les données d’un bloc, il faudra qu’elle régénère le fichier nonce pour que le hash suive toujours la règle imposée, or cette opération est impossible à réaliser pour une seule personne car le nombre d’opérations à effectuer est très élevé. De plus si jamais Eve arrive par chance à en trouver un nouveau il faut qu’elle recommence pour tous les blocs suivants car elle aura modifier le hash du bloc précédent.
+    Maintenant, si Eve tente de modifier les données d’un bloc, il faudra qu’elle régénère le fichier nonce pour que le hash suive toujours la règle imposée, or cette opération est impossible à réaliser pour une seule personne car le nombre d’opérations à effectuer est très élevé. De plus si jamais Eve arrive par chance à en trouver un nouveau il faut qu’elle recommence pour tous les blocs suivants car elle aura modifié le hash du bloc précédent.
 
     \subsection{Intégrité du contenu d’un bloc}
 
@@ -276,9 +276,9 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     Lorsqu’un mineur trouve un nonce correct, il le diffuse sur le réseau, les autres mineurs vérifient ce fichier et selon sa validité le mineur est alors récompensé, en effet il va percevoir tous les frais de transactions du bloc.
 
     \chapter{Risques, vulnérabilités et attaques sur la blockchain}
-    La blockchain n'est pas inviolable, mais comme souvent, les failles présentes sont dûes à des erreurs d'implémentations ou à des négligences. La seule attaque ne se basant pas sur ces vulnérabilités est appelée \emph{Attaque 51}.
+    La blockchain n'est pas inviolable, mais comme souvent, les failles présentes sont dues à des erreurs d'implémentations ou à des négligences. La seule attaque ne se basant pas sur ces vulnérabilités est appelée \emph{Attaque 51}.
     \section{Attaque 51}
-    La blockchain se basant sur le principe de consensus, si un groupe de personne possède plus de 50 \% de la capacité de calcul, elle crée un autre consensus qui peut être faussé par l'introduction de blocs corrompus qui annuleraient des transactions par exemple. De ce fait, on peut modifier la blockchain et la faire plus longue que celle calculée par le reste du réseau, ce qui la rendrait légitime par tout le réseau.
+    La blockchain se basant sur le principe de consensus, si un groupe de personnes possède plus de 50 \% de la capacité de calcul, elle crée un autre consensus qui peut être faussé par l'introduction de blocs corrompus qui annuleraient des transactions par exemple. De ce fait, on peut modifier la blockchain et la faire plus longue que celle calculée par le reste du réseau, ce qui la rendrait légitime par tout le réseau.
     \subsection{Réalisation}
     Pour obtenir 51 \% de la puissance totale de calcul, on pourrait détourner des machines de calcul existantes pour les réunir sous une même bannière (un même pool).
     Il existe également la possibilité de créer une nouvelle capacité de calcul, en créant une nouvelle ferme de serveur pour arriver à une capacité X+1 (avec X la capacité déjà existante) pour atteindre une capacité totale de X+X+1. Cette possibilité est seulement théorique puisqu'il faudrait doubler le parc existant, déjà colossal.
@@ -287,14 +287,14 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     \newline
     Tout ceci peut casser la confiance dans une blockchain et la rendre caduque.
     \subsection{Exemple}
-    En début d'année 2019, la blockchain Ethereum Classic (ETC) a subi une attaque 51, il y a eu plusieurs réorganisations, qui ont prmis des doubles dépenses. Le préjudice est éstimé à 219 500 ETC, soit plus de 1 million de dollars à l'époque.
+    En début d'année 2019, la blockchain Ethereum Classic (ETC) a subi une attaque 51, il y a eu plusieurs réorganisations, qui ont prmis des doubles dépenses. Le préjudice est estimé à 219 500 ETC, soit plus de 1 million de dollars à l'époque.
     \\
     Cette attaque a été rendue possible car la puissance de calcul nécessaire était tellement négligeable que cela ne coutait que 4500 \$ par heure.\cite{51ETC}
 
     \section[Vulnérabilités des smart contracts]{Vulnérabilités des smart contracts~\cite{dasp}}
     \subsection{Réentrance}
 
-    C'est la plus connue des vulnérabilités de la blockchain Ethereum de l'époque. Elle a supris tout le monde et a mené à un \emph{hard fork}\footnote{grosse modification}. La réentrance survient lorsque des appels de contrat externes sont autorisés à passer de nouveaux appels au contrat appelant avant la fin de l'exécution initiale. Pour une fonction, cela signifie que l'état du contrat peut changer en cours d'exécution à la suite d'un appel à un contrat non approuvé ou de l'utilisation d'une fonction de bas niveau avec une adresse externe.
+    C'est la plus connue des vulnérabilités de la blockchain Ethereum de l'époque. Elle a surpris tout le monde et a mené à un \emph{hard fork}\footnote{grosse modification}. La réentrance survient lorsque des appels de contrat externes sont autorisés à passer de nouveaux appels au contrat appelant avant la fin de l'exécution initiale. Pour une fonction, cela signifie que l'état du contrat peut changer en cours d'exécution à la suite d'un appel à un contrat non approuvé ou de l'utilisation d'une fonction de bas niveau avec une adresse externe.
     \\
     \\
     Voici un exemple de réentrance :
@@ -316,7 +316,7 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
         \item Un smart contract publie un nombre RSA ($N = p1 * p2$).
         \item Un appel à sa foncion \emph{submitSolution()} avec les bons \emph{p}1 et \emph{p}2 récompense l'expéditeur.
         \item Alice factorise le nombre RSA et soumet une solution.
-        \item Quelqu'un sur le réseau voit la transactionb d'Alice (contenant la solution) en attente d'être minée et soumet cette même solution avec des frais plus élevés.
+        \item Quelqu'un sur le réseau voit la transaction d'Alice (contenant la solution) en attente d'être minée et soumet cette même solution avec des frais plus élevés.
         \item La seconde transaction est choisie par les mineurs puisqu'elle possède des frais plus élevés. L'attaquant a gagné.
     \end{itemize}
 
@@ -376,7 +376,7 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     \section{Rapport d'activité de 2018 de l'ANSSI}
 
     Le 15 avril 2019, l'ANSSI a publié son rapport d'activités de 2018, intitulé \say{Construire ensemble la confiance 
-    numerique de demain}. 
+    numérique de demain}. 
     Dans ce rapport, L'ANSSI met en avant 5 types de cybermenaces, dont une qui viserait à générer de façon frauduleuse des 
     cryptomonnaies. Par conséquent, l'ANSSI considère que la sécurité absolue des blockchains n'est qu'un mythe.
     \cite{anssi2018}
