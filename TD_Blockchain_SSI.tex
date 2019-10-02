@@ -14,7 +14,7 @@
 \usepackage{subcaption}
 \usepackage{eurosym}
 \usepackage{float}
-\usepackage{dirtytalk}
+\usepackage{csquotes}
 
 \DeclareUnicodeCharacter{202F}{FIX ME!!!!}
 
@@ -40,7 +40,7 @@
     \chapter{Introduction à la blockchain}
     \section{Nouvelle technologie - Historique}
     En 1991 l’architecture de la blockchain a été décrite par les chercheurs Stuart Haber et W. Scott Stornetta lors d’une recherche permettant l’horodatage de documents numériques assurant qu’ils ne soient jamais antidatés ou altérés. 
-En 1992, le protocole \say{ arbre de Merkle } fut utilisé pour combiner plusieurs documents dans un seul bloc. 
+En 1992, le protocole \hyphenquote{french}{ arbre de Merkle } fut utilisé pour combiner plusieurs documents dans un seul bloc. 
 Le brevet déposé expira en 2004, 4 ans avant la création du Bitcoin.
 En 2008, la publication d’un livre blanc par un inconnu se présentant sous le pseudonyme Satoshi Nakamoto, signe le retour de la blockchain. Son but était d’introduire un système de paiement électronique décentralisé peer-to-peer, le Bitcoin.
     \section{Qu'est-ce que la blockchain ?}
@@ -64,7 +64,7 @@ Tous les échanges dans la blockchain sont anonymes, consultables, et non modifi
 Avec la décentralisation des données, l’utilisateur est maître de ses données personnelles et de son identité numérique, il peut choisir les services qui accèderont à ses données et en monnayer l’accès, tout en pouvant révoquer ce dernier lorsqu'il le souhaite. Cela permet de présenter une facette de son identité en fonction du contexte. 
 
 \section{Les tokens}
-Toute blockchain publique fonctionne obligatoirement avec un jeton : \say{ le Token }. Il est programmable et personnalisable pour représenter ce qui sera échangé. Cela peut être une cryptomonnaie, un droit d’usage, un droit de paiement, une réputation… Cela peut prendre n’importe quelle forme et c’est ce qui sera utilisé et échangé en peer-to-peer sans duplication sur la blockchain.
+Toute blockchain publique fonctionne obligatoirement avec un jeton : \hyphenquote{french}{ le Token }. Il est programmable et personnalisable pour représenter ce qui sera échangé. Cela peut être une cryptomonnaie, un droit d’usage, un droit de paiement, une réputation… Cela peut prendre n’importe quelle forme et c’est ce qui sera utilisé et échangé en peer-to-peer sans duplication sur la blockchain.
 Ce token peut être acheté et vendu n’importe quand en fonction de l’offre et de la demande sur une plateforme d’échange, son prix n’est jamais fixe mais varie tout le temps. 
 
 Un token conserve toutes les caractéristiques d’une cryptomonnaie : infalsifiable, enregistrement de la transaction dans un bloc immuable, sécurité des échanges.
@@ -107,8 +107,7 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
           \caption{Miniclip’s 8-Ball Pool : Un jeu mobile qui pourrait utiliser la blockchain}
         \end{center}
     \end{figure}
-    
-    \\ Ainsi, des jeux comme Gods Unchained, basés sur la blockchain, ont commencés à voir le jour. Il s'agit d'un jeu de cartes, qui, pour les connaisseurs ressemble énormément à Hearthstone. A un détail près, les cartes sont limitées et identifiées de manière unique à l'aide d'un token. Chaque carte vaut d'ailleurs une certaine somme en Ethereum. Petite anecdote un concours pour remporter une carte dont la valeur est estimée à 60 000\euro  est en cours. Tout l'intérêt de la blockchain, est l'identification unique des cartes (et l'aspect infalsifiable du registre) empêchant un pirate d'introduire des cartes illégitimes dans le jeu.
+    Ainsi, des jeux comme Gods Unchained, basés sur la blockchain, ont commencés à voir le jour. Il s'agit d'un jeu de cartes, qui, pour les connaisseurs ressemble énormément à Hearthstone. A un détail près, les cartes sont limitées et identifiées de manière unique à l'aide d'un token. Chaque carte vaut d'ailleurs une certaine somme en Ethereum. Petite anecdote un concours pour remporter une carte dont la valeur est estimée à 60 000\euro  est en cours. Tout l'intérêt de la blockchain, est l'identification unique des cartes (et l'aspect infalsifiable du registre) empêchant un pirate d'introduire des cartes illégitimes dans le jeu.
     
     \begin{figure}[H]
         \begin{center}
@@ -126,14 +125,14 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     \\
     Le postulat de base est simple. Les consommateurs n’ont jamais eu autant de choix dans la diversité de leurs aliments. Pourtant d’après IBM, 84\% des acheteurs considèrent au moment de leur achat, où et comment ont été produits les aliments. C’est là que la blockchain peut être décisive dans un milieu aussi compétitif puisqu'elle permet une transparence totale de la chaîne d’approvisionnement et de la fabrication, toujours grâce à l’aspect infalsifiable du registre de transaction.
     \\
-    D’après Nestlé, cela permet de \say{ renforcer le lien de confiance avec ses consommateurs }. C’est pourquoi ces derniers appliquent cette solution sur 15 de leurs produits phares, notamment la purée Mousline. Carrefour compte quant à lui déployer cette solution d’ici 2020 sur l’ensemble des produits alimentaires Filière Qualité Carrefour, soit 300 références.
+    D’après Nestlé, cela permet de \hyphenquote{french}{ renforcer le lien de confiance avec ses consommateurs }. C’est pourquoi ces derniers appliquent cette solution sur 15 de leurs produits phares, notamment la purée Mousline. Carrefour compte quant à lui déployer cette solution d’ici 2020 sur l’ensemble des produits alimentaires Filière Qualité Carrefour, soit 300 références.
     \\
     Assurer la traçabilité des produits représente aussi un avantage majeur en cas d’incident de sécurité alimentaire. Certaines compagnies, prennent parfois plusieurs jours à plusieurs semaines pour retracer leur propre chaine.
     \\
     En généralisant, la plus grosse vulnérabilité de la chaîne d’approvisionnement est le manque de transparence car c'est une porte ouverte vers la fraude et la corruption (exemple de la fraude sur l’étiquetage faisant passer de la viande de cheval pour de la viande de bœuf), problème qui est résolu par la blockchain.
 
     \section{Les Smart Contracts}
-    Les smart contracts constituent l’un des types d’usage les plus prometteurs de la blockchain. Concrètement, il s’agit d’un programme informatique qui exécute automatiquement des conditions définies au préalable et inscrites dans la blockchain. Un smart contract est beaucoup plus simple qu’il n’y paraît. Il fonctionne comme toute instruction \say{ if – then }. 
+    Les smart contracts constituent l’un des types d’usage les plus prometteurs de la blockchain. Concrètement, il s’agit d’un programme informatique qui exécute automatiquement des conditions définies au préalable et inscrites dans la blockchain. Un smart contract est beaucoup plus simple qu’il n’y paraît. Il fonctionne comme toute instruction \hyphenquote{french}{ if – then }. 
     \\
     \indent
     Pour illustrer, saviez-vous que 60\% des passagers assurés contre le retard de leur vol ne revendiquaient jamais leur argent ? C’est à partir de ce constat qu’un système d’assurance automatisé basé sur les smart contracts est né. AXA est l’un des premiers grands groupes d’assurance à l’adopter. Le principe ? Les passagers sont automatiquement indemnisés lorsque leur vol est en retard, sans avoir besoin de remplir un quelconque formulaire, et donc sans que l’entreprise ne doive traiter les demandes. Pour se déclencher le smart contract se connecte à une base de données supposée fiable, dans le cas présent la base de données de l’aéroport.
@@ -229,7 +228,7 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     \end{itemize}
     Si nous voulons vérifier l’intégrité de la transaction L3 (Hash 1-0), nous devons seulement posséder le hash de son frère (Hash 1-1), celui de son oncle (Hash 0) et enfin la racine (le Top Hash).
     
-    Pour cette opération nous devons seulement être sûr de l’intégrité du \say{ Top Hash }, c’est pourquoi cette information sera rajoutée au contenu d’un bloc dont l'intégrité a été prouvée dans le point précédent.\cite{merkle}
+    Pour cette opération nous devons seulement être sûr de l’intégrité du \hyphenquote{french}{ Top Hash }, c’est pourquoi cette information sera rajoutée au contenu d’un bloc dont l'intégrité a été prouvée dans le point précédent.\cite{merkle}
     
     \subsection {Confidentialité de la blockchain}
     La confidentialité correspond à la protection des données. En d’autres termes si nous lions ça à la blockchain, cela signifie que la transaction et l’identité des participants doivent être protégés. 
@@ -269,7 +268,7 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
 
     \begin{itemize}
         \item Vérifier l’intégrité des blocs et des transactions : Ces opérations sont très rapides il s’agit simplement de vérifier les hashs.
-        \item Créer / ouvrir des nouveaux blocs : Comme nous l’avons vu précédemment cette opération consiste à trouver un fichier \say{ nonce } afin que le hash du bloc respecte certaines règles et donc sécuriser la blockchain. Cela prend énormément de temps de calcul et par conséquent provoque un réel impact écologique (électricité).
+        \item Créer / ouvrir des nouveaux blocs : Comme nous l’avons vu précédemment cette opération consiste à trouver un fichier \hyphenquote{french}{ nonce } afin que le hash du bloc respecte certaines règles et donc sécuriser la blockchain. Cela prend énormément de temps de calcul et par conséquent provoque un réel impact écologique (électricité).
         \newline
     \end{itemize}
 
@@ -330,7 +329,7 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     \begin{itemize}
         \item Un jeu paye le tout premier joueur à minuit aujourd'hui.
         \item Un mineur malveillant inclut sa tentative de gagner le jeu et règle l'horodatage à minuit.
-        \item Un peu avant minuit, le mineur finit par miner le bloc. L'heure actuelle est \say{assez proche de minuit}, les autres noeuds du réseau acceptent le bloc.
+        \item Un peu avant minuit, le mineur finit par miner le bloc. L'heure actuelle est \hyphenquote{french}{assez proche de minuit}, les autres noeuds du réseau acceptent le bloc.
     \end{itemize}
 
     \subsection{Autres vulnérabilités}
@@ -375,7 +374,7 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
 
     \section{Rapport d'activité de 2018 de l'ANSSI}
 
-    Le 15 avril 2019, l'ANSSI a publié son rapport d'activités de 2018, intitulé \say{Construire ensemble la confiance 
+    Le 15 avril 2019, l'ANSSI a publié son rapport d'activités de 2018, intitulé \hyphenquote{french}{Construire ensemble la confiance 
     numérique de demain}. 
     Dans ce rapport, L'ANSSI met en avant 5 types de cybermenaces, dont une qui viserait à générer de façon frauduleuse des 
     cryptomonnaies. Par conséquent, l'ANSSI considère que la sécurité absolue des blockchains n'est qu'un mythe.
