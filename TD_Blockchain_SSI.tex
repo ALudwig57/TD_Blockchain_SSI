@@ -44,9 +44,9 @@ En 1992, le protocole \hyphenquote{french}{ arbre de Merkle } fut utilisé pour 
 Le brevet déposé expira en 2004, 4 ans avant la création du Bitcoin.
 En 2008, la publication d’un livre blanc par un inconnu se présentant sous le pseudonyme Satoshi Nakamoto, signe le retour de la blockchain. Son but était d’introduire un système de paiement électronique décentralisé peer-to-peer, le Bitcoin.
     \section{Qu'est-ce que la blockchain ?}
-    La blockchain est une architecture de stockage de données et de transmissions d’informations sécurisées qui fonctionnent de manière décentralisées, avec des blocs de données reliés entre eux. Elle contient l’historique de toutes les transactions effectuées entre les utilisateurs depuis sa création. 
+    La blockchain est une architecture de stockage de données et de transmissions d’informations sécurisées qui fonctionnent de manière décentralisée, avec des blocs de données reliés entre eux. Elle contient l’historique de toutes les transactions effectuées entre les utilisateurs depuis sa création. 
 
-La blockchain est un système décentralisé, fondé sur le principe de preuves. Elles nécessitent une puissance de calcul importante, fournie par les mineurs, notamment pour ouvrir un nouveau bloc pour y inscrire les données et pour vérifier la validité d’un bloc. Le détail du fonctionnement sera expliqué dans la partie technique.
+La blockchain est un système fondé sur le principe de preuves. Elles nécessitent une puissance de calcul importante, fournie par les mineurs, notamment pour ouvrir un nouveau bloc pour y inscrire les données et pour vérifier la validité d’un bloc. Le détail du fonctionnement sera expliqué dans la partie technique.
 
 \begin{figure}[H]
     \begin{center}
@@ -59,7 +59,7 @@ La blockchain est un système décentralisé, fondé sur le principe de preuves.
 Tous les échanges dans la blockchain sont anonymes, consultables, et non modifiables. Il n'y a besoin d'aucun tiers de confiance, l’ensemble du réseau se chargeant d’authentifier les transactions avec la méthode de cryptographie utilisée.
 
 \section{La décentralisation des données}
-    Le fait que la blockchain soit décentralisée et partagée entre ses utilisateurs permet la vérification de l’intégrité de la chaine par n’importe quel utilisateur, même les créateurs n’ont aucun pouvoir unilatéral sur la blockchain (censure) ou la modification du fonctionnement, ce qui est totalement différent des applications proposées par exemple, par les GAFAM~\cite{GAFAM}.
+    Le fait que la blockchain soit décentralisée et partagée entre ses utilisateurs permet la vérification de l’intégrité de la chaine par n’importe quel utilisateur, même les créateurs n’ont aucun pouvoir unilatéral sur la blockchain (censure) ou la modification du fonctionnement, ce qui est totalement différent des applications proposées par exemple, par les GAFAM.
 
 Avec la décentralisation des données, l’utilisateur est maître de ses données personnelles et de son identité numérique, il peut choisir les services qui accèderont à ses données et en monnayer l’accès, tout en pouvant révoquer ce dernier lorsqu'il le souhaite. Cela permet de présenter une facette de son identité en fonction du contexte. 
 
@@ -71,21 +71,27 @@ Un token conserve toutes les caractéristiques d’une cryptomonnaie : infalsifi
 
 \section{Le Bitcoin et les cryptomonnaies dans tout ça ?}
 La première blockchain qui s’est développée en 2009 est un système de paiement qui utilise une cryptomonnaie comme token : le bitcoin. 
-A chaque transaction réalisée, les agents qui traitent et vérifient les transactions sont rétribués, ce sont les mineurs. Le fait de miner consiste à vérifier, sécuriser et enregistrer une transaction et des bitcoins sont générés dans le système à chaque nouveau bloc créé.
- Le système à une limite de 21 millions d’unités sur le marché et d’après les estimations, ce cap sera atteint d’ici 2050, ceci rendra le bitcoin encore plus rare car limité. Le bitcoin, comme toute cryptomonnaie peut être échangé sur des places de marchés avec la loi de l’offre et de la demande, ce qui peut grandement faire varier le prix comme en 2017 lorsque le prix du bitcoin a explosé dû à la demande.
+A chaque transaction réalisée, les agents qui traitent et vérifient les transactions sont rétribués, ce sont les mineurs. Le fait de miner consiste à vérifier, sécuriser et enregistrer une transaction et des bitcoins sont générés dans le système, à chaque nouveau bloc créé.
+ Le système à une limite de 21 millions d’unités sur le marché et, d’après les estimations, ce cap sera atteint d’ici 2050, ceci rendra le bitcoin encore plus rare car limité. Le bitcoin, comme toute cryptomonnaie peut être échangé sur des places de marchés avec la loi de l’offre et de la demande, ce qui peut grandement faire varier le prix comme en 2017 lorsque le prix du bitcoin a explosé dû à la demande.
 
-Le bitcoin prend une place importante sur le marché car il s'est fait connaitre d'un coup et son intérêt à engendré de nombreux achats en une petite période de temps. En outre la blockchain sécurise les transactions et la faillite ou les scandales bancaires comme la Lehman Brothers~\cite{Lehman} ont fait vasciller la confiance du peuple envers ces établissements.
+Le bitcoin prend une place importante sur le marché car il s'est fait connaitre d'un coup et son intérêt a engendré de nombreux achats en une petite période de temps. En outre, la blockchain sécurise les transactions et la faillite ou les scandales bancaires comme la Lehman Brothers~\cite{Lehman} ont fait vasciller la confiance du peuple envers ces établissements.
 De plus le nombre de commerçants qui acceptent les bitcoins augmentent petit à petit, comme Microsoft ou Steam pendant un temps, ce qui rend l'utilisation des bitcoins moins compliquée.
 
 \section{Les 3 types de blockchain}
 
-Publique : tout le monde peut lire, envoyer et participer à l'approbation des transactions dans le registre.
+Il existe 3 types de blockchain :
+\\
 
-Privée : Les permissions d'accès, de lecture et de vérification du registre de la Blockchain peuvent être contrôlés pour limiter les accès tout en conservant les avantages de la technologie comme l'authenticité, ou la décentralisation.
-
-Consortium : Dans un consortium le processus d'approbation peut être contrôlé par un nombre défini de nœuds. Par exemple, une dizaine d'institutions peuvent se mettre d'accord pour dire qu'il faut au moins que 8 d'entre elles approuvent le bloc avant qu'il soit considéré comme valide. Cela modifie donc le comportement original car ce n'est plus la règle de majorité qui compte mais ce sont les participants au processus d'approbation qui ont été sélectionnés qui vont décider.
+\begin{itemize}
 
 
+\item Publique : tout le monde peut lire, envoyer et participer à l'approbation des transactions dans le registre.\\
+
+\item Privée : Les permissions d'accès, de lecture et de vérification du registre de la Blockchain peuvent être contrôlés pour limiter les accès tout en conservant les avantages de la technologie comme l'authenticité, ou la décentralisation.\\
+
+\item Consortium : Dans un consortium le processus d'approbation peut être contrôlé par un nombre défini de nœuds. Par exemple, une dizaine d'institutions peuvent se mettre d'accord pour dire qu'il faut au moins que 8 d'entre elles approuvent le bloc avant qu'il soit considéré comme valide. Cela modifie donc le comportement original car ce n'est plus la règle de majorité qui compte mais ce sont les participants au processus d'approbation qui ont été sélectionnés qui vont décider.\\
+
+\end{itemize}
  
     
     \chapter{Les applications de la blockchain}
@@ -107,7 +113,7 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
           \caption{Miniclip’s 8-Ball Pool : Un jeu mobile qui pourrait utiliser la blockchain}
         \end{center}
     \end{figure}
-    Ainsi, des jeux comme Gods Unchained, basés sur la blockchain, ont commencés à voir le jour. Il s'agit d'un jeu de cartes, qui, pour les connaisseurs ressemble énormément à Hearthstone. A un détail près, les cartes sont limitées et identifiées de manière unique à l'aide d'un token. Chaque carte vaut d'ailleurs une certaine somme en Ethereum. Petite anecdote un concours pour remporter une carte dont la valeur est estimée à 60 000\euro  est en cours. Tout l'intérêt de la blockchain, est l'identification unique des cartes (et l'aspect infalsifiable du registre) empêchant un pirate d'introduire des cartes illégitimes dans le jeu.
+    Ainsi, des jeux comme Gods Unchained, basés sur la blockchain, ont commencés à voir le jour. Il s'agit d'un jeu de cartes, qui, pour les connaisseurs ressemble énormément à Hearthstone. A un détail près, les cartes sont limitées et identifiées de manière unique à l'aide d'un token. Chaque carte vaut d'ailleurs une certaine somme en Ethereum. Petite anecdote, un concours pour remporter une carte dont la valeur est estimée à 60 000 \euro~est en cours. Tout l'intérêt de la blockchain, est l'identification unique des cartes (et l'aspect infalsifiable du registre) empêchant un pirate d'introduire des cartes illégitimes dans le jeu.
     
     \begin{figure}[H]
         \begin{center}
@@ -123,7 +129,7 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
 
     En parlant de géants, dans un tout autre domaine cette fois, Carrefour et Nestlé ont eux aussi adoptés la blockchain en s’alliant à IBM et sa solution IBM Food Trust~\cite{IBMfood}.
     \\
-    Le postulat de base est simple. Les consommateurs n’ont jamais eu autant de choix dans la diversité de leurs aliments. Pourtant d’après IBM, 84\% des acheteurs considèrent au moment de leur achat, où et comment ont été produits les aliments. C’est là que la blockchain peut être décisive dans un milieu aussi compétitif puisqu'elle permet une transparence totale de la chaîne d’approvisionnement et de la fabrication, toujours grâce à l’aspect infalsifiable du registre de transaction.
+    Le postulat de base est simple : Les consommateurs n’ont jamais eu autant de choix dans la diversité de leurs aliments. Pourtant d’après IBM, 84\% des acheteurs considèrent au moment de leur achat, où et comment ont été produits les aliments. C’est là que la blockchain peut être décisive. Dans un milieu aussi compétitif, elle permet une transparence totale de la chaîne d’approvisionnement et de fabrication, toujours grâce à l’aspect infalsifiable du registre de transaction.
     \\
     D’après Nestlé, cela permet de \hyphenquote{french}{ renforcer le lien de confiance avec ses consommateurs }. C’est pourquoi ces derniers appliquent cette solution sur 15 de leurs produits phares, notamment la purée Mousline. Carrefour compte quant à lui déployer cette solution d’ici 2020 sur l’ensemble des produits alimentaires Filière Qualité Carrefour, soit 300 références.
     \\
@@ -135,8 +141,8 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     Les smart contracts constituent l’un des types d’usage les plus prometteurs de la blockchain. Concrètement, il s’agit d’un programme informatique qui exécute automatiquement des conditions définies au préalable et inscrites dans la blockchain. Un smart contract est beaucoup plus simple qu’il n’y paraît. Il fonctionne comme toute instruction \hyphenquote{french}{ if – then }. 
     \\
     \indent
-    Pour illustrer, saviez-vous que 60\% des passagers assurés contre le retard de leur vol ne revendiquaient jamais leur argent ? C’est à partir de ce constat qu’un système d’assurance automatisé basé sur les smart contracts est né. AXA est l’un des premiers grands groupes d’assurance à l’adopter. Le principe ? Les passagers sont automatiquement indemnisés lorsque leur vol est en retard, sans avoir besoin de remplir un quelconque formulaire, et donc sans que l’entreprise ne doive traiter les demandes. Pour se déclencher le smart contract se connecte à une base de données supposée fiable, dans le cas présent la base de données de l’aéroport.
-    Le smart contract est indissociable de la blockchain. Car c’est cette dernière qui permet de se passer d’un tier de confiance pour les phases déclaratives.
+    Pour illustrer, saviez-vous que 60\% des passagers assurés contre le retard de leur vol ne revendiquaient jamais leur argent ? C’est à partir de ce constat qu’un système d’assurance automatisé basé sur les smart contracts est né. AXA est l’un des premiers grands groupes d’assurance à l’adopter. Le principe ? Les passagers sont automatiquement indemnisés lorsque leur vol est en retard, sans avoir besoin de remplir un quelconque formulaire, et donc sans que l’entreprise ne doive traiter les demandes. Pour se déclencher, le smart contract se connecte à une base de données supposée fiable, dans le cas présent la base de données de l’aéroport.
+    Le smart contract est indissociable de la blockchain car elle permet de se passer d’un tier de confiance pour les phases déclaratives.
     \\
     \indent~
     L’avantage des smarts contracts c’est, qu’une fois inscrits dans la blockchain, les termes du contrat ne pourront plus être modifiés. On retrouve encore une fois l’aspect indissociable de la blockchain. Car un smart contract qui ne serait pas dans la blockchain serait un programme dont les termes pourraient être changés en cours d’exécution.
@@ -156,9 +162,9 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     
     \subsection{Disponibilité de la blockchain}
     La blockchain est un réseau décentralisé qui fonctionne sur le principe du Peer-to-peer (P2P). 
-    Ainsi un serveur principal partage avec tout le réseau les nouvelles modifications, mais là où est la force d'un réseau pair à pair c'est que les clients se partagent aussi 
+    Ainsi un serveur principal partage avec tout le réseau les nouvelles modifications, mais là où est la force d'un réseau pair à pair, c'est que les clients se partagent aussi 
     entre eux les informations qu'ils connaissent déjà. De ce fait, les informations sont alors disponibles en permanence. Le seul moyen de les rendre inaccessibles serait une 
-    coupure internet mondiale, or pour lutter contre ce problème certaines blockchains prévoient d'utiliser des satellites en cas de panne du réseau.
+    coupure internet mondiale, or pour lutter contre ce problème certaines blockchains prévoient d'utiliser des satellites.
     
     \begin{figure}[H]
         \begin{center}
@@ -196,9 +202,6 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     \end{figure}
 
     Pour remédier à ce problème, une première solution est de hacher le contenu d’un bloc et d’inscrire le résultat dans celui-ci, or un hachage est très rapide à réaliser et donc rien ne pourrait empêcher Eve de modifier les données puis recalculer un nouveau hash.
-    \\
-    \\
-    Une modification des informations présentes dans un bloc est donc nécessaire :
 
     \begin{figure}[H]
         \begin{center}
@@ -207,8 +210,8 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
           \caption{Une chaine de bloc : un bloc est lié à son prédecesseur par le hash de ce dernier.}
         \end{center}
     \end{figure}
-    \newpage
-
+    Une modification des informations présentes dans un bloc est donc nécessaire :
+    \\
     \begin{itemize}
         \item En plus des informations déjà présentes, nous avons maintenant le hash du bloc précédent et le hash du bloc actuel : Pour l’obtenir nous hachons la totalité des informations, les transactions, le fichier nonce et le hash du bloc précédent.
         \item Un nonce est un fichier généré aléatoirement pour que le hash du bloc suive une règle précise (ici commencer par cinq zéros consécutifs). Nous reviendrons plus précisément sur ce sujet dans la partie Proof Of Work.
@@ -221,7 +224,7 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
 
     Dans la partie précédente nous avons vu comment nous assurer que les blocs sont intègres. Mais comment savoir avant d’ajouter des transactions dans un bloc que celles-ci n’ont pas été modifiées ?
     
-    Pour cela nous allons utiliser un arbre de Merkle, inventé en 1979 par Ralph Merkle, il s’agit d’un arbre de hachage binaire, son but est donc de vérifier l’intégrité d’un groupe de données (ici des transactions) sans devoir nécessairement utiliser toutes les données disponibles dans un bloc.
+    Pour cela nous allons utiliser un arbre de Merkle, inventé en 1979 par Ralph Merkle. Il s’agit d’un arbre de hachage binaire, son but est donc de vérifier l’intégrité d’un groupe de données (ici des transactions) sans devoir nécessairement utiliser toutes les données disponibles dans un bloc.
 
     \begin{figure}[H]
         \begin{center}
@@ -243,14 +246,14 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     Pour cette opération il suffit d'être sûr de l’intégrité du \hyphenquote{french}{ Top Hash }, c’est pourquoi cette information sera rajoutée au contenu d’un bloc dont l'intégrité a été prouvée dans le point précédent.\cite{merkle}
     
     \subsection {Confidentialité de la blockchain}
-    La confidentialité correspond à la protection des données. En d’autres termes si nous lions ça à la blockchain, cela signifie que la transaction et l’identité des participants doivent être protégés. 
+    La confidentialité correspond à la protection des données. En d’autres termes, si nous lions ça à la blockchain, cela signifie que la transaction et l’identité des participants doivent être protégés. 
     
     Reprenons notre exemple :
     Nos deux amis Alice et Bob possèdent 10 \euro~sur leur compte et Bob souhaite envoyer 5 \euro~à Alice. 
     
-    Si nous voulons que leur transaction soit confidentielle, il faut que Eve soit incapable d’identifier que Alice et Bob se sont échangés de l’argent, ainsi que le montant. Sauf si Alice et Bob décident volontairement de révéler ces informations. 
+    Si nous voulons que leur transaction soit confidentielle, il faut que Eve soit incapable ni d’identifier que Alice et Bob se sont échangés de l’argent, ni le montant échangé. Sauf si Alice et Bob décident volontairement de révéler ces informations.
     
-    Il faut savoir que dans la blockchain toutes les transactions sont publiques. Ainsi Eve peut facilement avoir accès à la transaction, pour peu qu’elle ne soit pas encryptée. Ce qui est le cas de beaucoup de transactions publiques. 
+    Il faut savoir que dans la blockchain, toutes les transactions sont publiques. Ainsi Eve peut facilement avoir accès à la transaction, pour peu qu’elle ne soit pas encryptée. Ce qui est le cas de beaucoup de transactions publiques. 
     
     Voici un exemple de transaction tiré de blockchain.com : nous savons les adresses publiques des acteurs de la transaction, ainsi que la date et le montant de la transaction. Le montant que possède ces deux adresses dans leur portefeuille est aussi disponible.
 
@@ -270,9 +273,9 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
         \end{center}
     \end{figure}
 
-    Si l’on veut que la transaction soit confidentielle. Il faut donc que Bob encrypte les informations de celle-ci avec la clé publique de Alice. Afin que seul Alice puisse décrypter la transaction avec sa clé privée. 
+    Si l’on veut que la transaction soit confidentielle. Il faut donc que Bob encrypte les informations de celle-ci avec la clé publique de Alice, afin que seul Alice puisse décrypter la transaction avec sa clé privée. 
     
-    Le problème du cryptage, c’est qu’il rompt l’un des principes fondamentaux de la blockchain, la transparence. C’est pourquoi pour le moment les transactions des blockchains publiques ne sont pas confidentielles. Comme nous avons d’ailleurs pu le voir sur l’image ci-dessus. Il s’agit d’ailleurs d’un sujet actif de recherche. 
+    Le problème du cryptage, c’est qu’il rompt l’un des principes fondamentaux de la blockchain, la transparence. C’est pourquoi, pour le moment, les transactions des blockchains publiques ne sont pas confidentielles. Comme nous avons d’ailleurs pu le voir sur l’image ci-dessus. Il s’agit d’ailleurs d’un sujet actif de recherche. 
 
 
     \subsection{Traçabilité}
@@ -283,23 +286,23 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
         \item Qui a reçu le virement ?
         \newline
     \end{itemize}
-    Le fait d'avoir la certitude que les informations soient intègres nous permet donc de valider que la blockchain respecte la notion de traçabilité. Ainsi, si nous revenons à notre cas d’application nous pouvons par exemple avoir accès à tous les anciens propriétaires du dernier billet de 10~\euro~ reçu par Alice. Nous avons aussi vu l’exemple de Carrefour qui utilise la blockchain spécifiquement pour la traçabilité de ses produits.
+    Le fait d'avoir la certitude que les informations soient intègres nous permet donc de valider que la blockchain respecte la notion de traçabilité. Ainsi, si nous revenons à notre cas d’application, nous pouvons par exemple avoir accès à tous les anciens propriétaires du dernier billet de 10~\euro~ reçu par Alice. Nous avons aussi vu l’exemple de Carrefour qui utilise la blockchain spécifiquement pour la traçabilité de ses produits.
 
     \subsection{Proof-of-Work}
 
     Le Proof of Work (PoW ou preuve de travail) est plus communément appelé minage. Les utilisateurs (Alice, Bob et Eve) disposent donc chacun d’une copie de la blockchain et ils ont différentes missions :
 
     \begin{itemize}
-        \item Vérifier l’intégrité des blocs et des transactions : Ces opérations sont très rapides il s’agit simplement de vérifier les hashs.
+        \item Vérifier l’intégrité des blocs et des transactions : Ces opérations sont très rapides, il s’agit simplement de vérifier les hashs.
         \item Créer / ouvrir des nouveaux blocs : Comme nous l’avons vu précédemment cette opération consiste à trouver un fichier \hyphenquote{french}{ nonce } afin que le hash du bloc respecte certaines règles et donc sécuriser la blockchain. Cela prend énormément de temps de calcul et par conséquent provoque un réel impact écologique (électricité).
         \newline
     \end{itemize}
 
-    Lorsqu’un mineur trouve un nonce correct, il le diffuse sur le réseau, les autres mineurs vérifient ce fichier et selon sa validité le mineur est alors récompensé, en effet il va percevoir tous les frais de transactions du bloc.
+    Lorsqu’un mineur trouve un nonce correct, il le diffuse sur le réseau, les autres mineurs vérifient ce fichier et selon sa validité, le mineur est alors récompensé, en effet il va percevoir tous les frais de transactions du bloc.
     \newline
 
-    Chaque cryptomonnaie impose un délai avant de pouvoir ouvrir un nouveau bloc, par exemple pour le bitcoin il y a environ un nouveau bloc toutes les 10 minutes.
-    Pour ce faire, plus il y aura de mineurs sur un réseau plus la difficulté augmentera, c'est-à-dire les règles sur l'aspect que doit avoir le hash seront de plus en plus complexes et donc le fichier nonce sera bien plus dur à trouver. \newline
+    Chaque cryptomonnaie impose un délai avant de pouvoir ouvrir un nouveau bloc, par exemple pour le bitcoin, il y a environ un nouveau bloc toutes les 10 minutes.
+    Plus il y aura de mineurs sur un réseau plus la difficulté augmentera, c'est-à-dire les règles sur l'aspect que doit avoir le hash seront de plus en plus complexes et donc le fichier nonce sera bien plus dur à trouver. \newline
     Or, le fait que la génération de nonce soit purement aléatoire fait que ce procédé peut poser problème. Par exemple le 30 septembre 2019 pour la dixième fois depuis 2004, un bloc a été miné en seulement 2 minutes (0.000679\% de chance),
     ainsi la difficulté a été grandement augmentée et par conséquent le prochain bloc a été miné en 2h ce qui a engendré des retards de paiements.
 
@@ -439,31 +442,41 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     \subsection{Les ICO, projet UNICORN}
 
     Une ICO (Initial Coin Offering) est une méthode de levée de fonds fonctionnant via l’émission de tokens échangeables contre des cryptomonnaies 
-    durant la phase de démarrage d’un projet technologique à un stade précoce de leur développement.
+    durant la phase de démarrage d’un projet technologique, à un stade précoce de leur développement.
     Les tokens sont émis par l’organisation à l’origine de l’ICO, et peuvent être acquis par quiconque lors de l’ICO en échange de cryptomonnaie 
     (le plus souvent, de l’ether ou du bitcoin).
 
-    Contrairement à des méthodes classiques de levées de fonds, les tokens qui son émis et vendus par l'organisation ne représentent pas des parts
+    Contrairement à des méthodes classiques de levées de fonds, les tokens qui sont émis et vendus par l'organisation ne représentent pas des parts
     de l'entreprise, mais par exemple un droit d'usage du service qui sera développé.
 
     En quelques sorte, participer à des ICO et acheter des tokens reviendrait à pré-payer le service qui sera développé.
-    Par exemple, Storj, un service de stockage cloud décentralisé a levé l'équivalent de 30 millions de dollars via une ICO. 
-    Ils ont en effet créer leur propre token (le Storjcoin), afin de permettre aux utilisateurs de soit acheter de l'espace sur le réseau , soit les garder dans 
-    une perspective de spéculation, soit les convertir en monnaie nationale (Un Sotrjcoin vaut 0,085397~\euro~à la date du 2 octobre 2019).
-
+    Par exemple, Storj, un service de stockage cloud décentralisé a levé l'équivalent de 30 millions de dollars via une ICO.
+    \\
+    Ils ont créé leur propre token (le Storjcoin), afin de permettre aux utilisateurs :
+    
+    \begin{itemize}
+        \item d'acheter de l'espace sur le réseau.
+        \item de les garder dans 
+        une perspective de spéculation.
+        \item de les convertir en monnaie nationale (Un Sotrjcoin vaut 0,085397~\euro~à la date du 2 octobre 2019).
+        \\
+    \end{itemize}
+    
+    \noindent
     Malgré tous les avantages des ICO, ils présentent des risques assez élevés:
     \begin{itemize}
         \item Risque de perte en capital.
         \item Risque de volatilité ou d'absence de marché.
         \item Risque d'escroquerie ou de blanchiment.
         \item Risque associé aux projets financés.
+        \\\\
     \end{itemize}
 
     Afin de veiller à la protection des acteurs et investisseurs souhaitant participer
     aux projets utilisant les ICO, et et considérant que les ICO pourraient devenir un réel mode de financement alternatif
     pour un segment de l'économie en lien avec la Blockchain, l'Autorité des Marchés Financiers
     lance un programme d'accompagnement et de recherche des levées de fonds en actif numérique, appelé UNICORN.
-    L'AMF recevra par le biais de ce projet les initiateurs de ces projets afin d'approfondir son expertise économique et juridique
+    L'AMF recevra les initiateurs de ces projets afin d'approfondir son expertise économique et juridique
     des opérations réalisées et leur implication dans l'économie traditionnelle.
     \cite{unicorn}
     
