@@ -150,12 +150,24 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     \section{Qu'est-ce que la blockchain ?}
     Imaginons un livre dans lequel nous pouvons tout noter. Dans notre exemple, Alice pourra alors y indiquer le montant disponible sur son compte et toutes ses transactions réalisées. Une fois qu’une page est remplie, nous passons simplement à la page suivante.
     \\
-    La blockchain fonctionne sur ce même principe sauf qu’en réalité les pages sont appelées des blocs, et qu’une fois le nombre de transaction maximal atteint, nous ouvrons un nouveau bloc.
+    La blockchain fonctionne sur ce même principe sauf qu’en réalité les pages sont appelées des blocs, et qu’une fois le nombre de transaction maximal est atteint, nous ouvrons un nouveau bloc.
 
     \section{Fonctionnement de la blockchain}
     
-    %\subsection{Disponibilité de la blockchain}
+    \subsection{Disponibilité de la blockchain}
+    La blockchain est un réseau décentralisé qui fonctionne sur le principe du Peer-to-peer (P2P). 
+    Ainsi un serveur principal partage avec tout le réseau les nouvelles modifications, mais là où est la force d'un réseau pair à pair c'est que les clients se partagent aussi 
+    entre eux les informations qu'ils connaissent déjà. De ce fait, les informations sont alors disponibles en permanence. Le seul moyen de les rendre inaccessibles serait une 
+    coupure internet mondiale, or pour lutter contre ce problème certaines blockchains prévoient d'utiliser des satellites en cas de panne du réseau.
     
+    \begin{figure}[H]
+        \begin{center}
+          \includegraphics[width=.69\textwidth]{images/peerToPeer.png}
+          \label{fig:peerToPeer}
+          \caption{Blockchain : Un réseau Peer-to-peer}
+        \end{center}
+    \end{figure}
+
     \subsection{Intégrité d'un bloc}
     Il est important que toutes les données stockées dans la blockchain soient intègres, c’est-à-dire qu’il faut être sûr qu’elles n’aient pas été modifiées maladroitement ou par un utilisateur mal intentionné.
     \\
@@ -209,7 +221,7 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
 
     Dans la partie précédente nous avons vu comment nous assurer que les blocs sont intègres. Mais comment savoir avant d’ajouter des transactions dans un bloc que celles-ci n’ont pas été modifiées ?
     
-    Pour cela nous allons utiliser un arbre de Merkle, il s’agit d’un arbre de hachage binaire, son but est donc de vérifier l’intégrité d’un groupe de données (ici des transactions) sans devoir nécessairement utiliser toutes les données disponibles dans un bloc.
+    Pour cela nous allons utiliser un arbre de Merkle, inventé en 1979 par Ralph Merkle, il s’agit d’un arbre de hachage binaire, son but est donc de vérifier l’intégrité d’un groupe de données (ici des transactions) sans devoir nécessairement utiliser toutes les données disponibles dans un bloc.
 
     \begin{figure}[H]
         \begin{center}
@@ -223,12 +235,12 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
 
     \begin{itemize}
         \item Les feuilles (Hash 0-0, Hash 0-1, …) représentent le hash des transactions
-        \item Leur parent représente la concaténation de leur hash et ainsi de suite
+        \item Un parent représente le hash de ses deux enfants
         \newline
     \end{itemize}
     Si nous voulons vérifier l’intégrité de la transaction L3 (Hash 1-0), nous devons seulement posséder le hash de son frère (Hash 1-1), celui de son oncle (Hash 0) et enfin la racine (le Top Hash).
     
-    Pour cette opération nous devons seulement être sûr de l’intégrité du \hyphenquote{french}{ Top Hash }, c’est pourquoi cette information sera rajoutée au contenu d’un bloc dont l'intégrité a été prouvée dans le point précédent.\cite{merkle}
+    Pour cette opération il suffit d'être sûr de l’intégrité du \hyphenquote{french}{ Top Hash }, c’est pourquoi cette information sera rajoutée au contenu d’un bloc dont l'intégrité a été prouvée dans le point précédent.\cite{merkle}
     
     \subsection {Confidentialité de la blockchain}
     La confidentialité correspond à la protection des données. En d’autres termes si nous lions ça à la blockchain, cela signifie que la transaction et l’identité des participants doivent être protégés. 
@@ -262,6 +274,17 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     
     Le problème du cryptage, c’est qu’il rompt l’un des principes fondamentaux de la blockchain, la transparence. C’est pourquoi pour le moment les transactions des blockchains publiques ne sont pas confidentielles. Comme nous avons d’ailleurs pu le voir sur l’image ci-dessus. Il s’agit d’ailleurs d’un sujet actif de recherche. 
 
+
+    \subsection{Traçabilité}
+    Comme nous l’avons vu dans les points précédents, la blockchain peut être vue comme un livre dans lequel nous écrivons absolument tout :
+    \begin{itemize}
+        \item Qui a effectué ce virement ?
+        \item De quel montant est ce virement ?
+        \item Qui a reçu le virement ?
+        \newline
+    \end{itemize}
+    Le fait d'avoir la certitude que les informations soient intègres nous permet donc de valider que la blockchain respecte la notion de traçabilité. Ainsi, si nous revenons à notre cas d’application nous pouvons par exemple avoir accès à tous les anciens propriétaires du dernier billet de 10~\euro~ reçu par Alice. Nous avons aussi vu l’exemple de Carrefour qui utilise la blockchain spécifiquement pour la traçabilité de ses produits.
+
     \subsection{Proof-of-Work}
 
     Le Proof of Work (PoW ou preuve de travail) est plus communément appelé minage. Les utilisateurs (Alice, Bob et Eve) disposent donc chacun d’une copie de la blockchain et ils ont différentes missions :
@@ -273,6 +296,17 @@ Consortium : Dans un consortium le processus d'approbation peut être contrôlé
     \end{itemize}
 
     Lorsqu’un mineur trouve un nonce correct, il le diffuse sur le réseau, les autres mineurs vérifient ce fichier et selon sa validité le mineur est alors récompensé, en effet il va percevoir tous les frais de transactions du bloc.
+    \newline
+
+    Chaque cryptomonnaie impose un délai avant de pouvoir ouvrir un nouveau bloc, par exemple pour le bitcoin il y a environ un nouveau bloc toutes les 10 minutes.
+    Pour ce faire, plus il y aura de mineurs sur un réseau plus la difficulté augmentera, c'est-à-dire les règles sur l'aspect que doit avoir le hash seront de plus en plus complexes et donc le fichier nonce sera bien plus dur à trouver. \newline
+    Or, le fait que la génération de nonce soit purement aléatoire fait que ce procédé peut poser problème. Par exemple le 30 septembre 2019 pour la dixième fois depuis 2004, un bloc a été miné en seulement 2 minutes (0.000679\% de chance),
+    ainsi la difficulté a été grandement augmentée et par conséquent le prochain bloc a été miné en 2h ce qui a engendré des retards de paiements.
+
+    \subsection{Proof-of-Stack}
+    Ce principe remplace de plus en plus le Proof of Work car son concept est beaucoup moins énergivore. Le Proof Of Stack est comparable à un livret A : Nous sommes rémunérés un certain pourcentage pour garder des cryptomonnaies sur un serveur (cela s’appelle un masternode).
+    Au lieu de générer un fichier aléatoire pour valider un bloc, un leader va être élu pour en créer un nouveau qu’il pourra signer. Pour éviter toute tentative de fraude, il devra auparavant miser une certaine somme définie auparavant qui lui sera restituée quand le bloc aura été validé par les autres membres du réseau.
+
 
     \chapter{Risques, vulnérabilités et attaques sur la blockchain}
     La blockchain n'est pas inviolable, mais comme souvent, les failles présentes sont dues à des erreurs d'implémentations ou à des négligences. La seule attaque ne se basant pas sur ces vulnérabilités est appelée \emph{Attaque 51}.
