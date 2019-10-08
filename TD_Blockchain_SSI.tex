@@ -8,7 +8,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[francais]{babel}
 \usepackage[margin=1in]{geometry}
-\usepackage{url}
+\usepackage[hyphens]{url}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -317,6 +317,15 @@ Il existe 3 types de blockchain :
     La blockchain n'est pas inviolable, mais comme souvent, les failles présentes sont dues à des erreurs d'implémentations ou à des négligences. La seule attaque ne se basant pas sur ces vulnérabilités est appelée \emph{Attaque 51}.
     \section{Attaque 51}
     La blockchain se basant sur le principe de consensus, si un groupe de personnes possède plus de 50 \% de la capacité de calcul, elle crée un autre consensus qui peut être faussé par l'introduction de blocs corrompus qui annuleraient des transactions par exemple. De ce fait, on peut modifier la blockchain et la faire plus longue que celle calculée par le reste du réseau, ce qui la rendrait légitime par tout le réseau.
+
+    \begin{figure}[H]
+        \begin{center}
+          \includegraphics[width=\textwidth]{images/attaque51.jpg}
+          \label{fig:attaque51}
+          \caption{Fonctionnement d'une attaque 51}
+        \end{center}
+    \end{figure}
+
     \subsection{Réalisation}
     Pour obtenir 51 \% de la puissance totale de calcul, on pourrait détourner des machines de calcul existantes pour les réunir sous une même bannière (un même pool).
     Il existe également la possibilité de créer une nouvelle capacité de calcul, en créant une nouvelle ferme de serveur pour arriver à une capacité X+1 (avec X la capacité déjà existante) pour atteindre une capacité totale de X+X+1. Cette possibilité est seulement théorique puisqu'il faudrait doubler le parc existant, déjà colossal.
@@ -349,7 +358,6 @@ Il existe 3 types de blockchain :
     \subsection{Attaque frontale}
 
     Comme les mineurs sont récompensés par des frais de transaction pour l'exécution de code pour le compte d'adresses appartenant à des tiers, les utilisateurs peuvent spécifier des frais plus élevés. La blockchain Ethereum étant publique, tout le monde peut voir le contenu des transactions en attente. Si un utilisateur révèle une solution à un casse-tête ou un secret précieux, un utilisateur malveillant peut voler la solution et copier sa transaction avec des frais plus élevés afin de prendre la place de la solution d'origine. Un algorithme d'attaque frontale fait environ 150 lignes en Python.
-    \newpage
     Voici un exemple d'attaque frontale :
 
     \begin{itemize}
@@ -501,7 +509,18 @@ Il existe 3 types de blockchain :
     
     \backmatter
  
-    % \section{Conclusion et discussion}
+    \chapter{Conclusion}
+
+    La blockchain est une technologie prometteuse respectant les principes de disponibilité, d'intégrité, de confidentialité et de traçabilité des données. Même de grands groupes s'y mettent comme IBM ou Nestlé. A partir du principe de cryptomonnaies, elle s'est imposée comme une technologie du futur, permettant le partage et la vérification des données sans tiers de confiance grâce au réseau peer-to-peer. La législation, quant à elle, peine à lui trouver un cadre juridique, certains allant jusqu'à l'interdire (L'Inde a interdit tout paiement par bitcoin). Elle n'est également pas tout à fait conforme au RGPD. Sans juridiction appropriée, cela peut sembler dangereux, comme le montre le libra : au début, beaucoup de personnes étaient enthousiastes de l'arrivée d'un gros dans ce domaine, mais récemment, beaucoup comment à prendre peur comme paypal, qui se desiste, ou des gouvernements, qui craignent un déreglement monétaire mondial~\cite{librapeur}.
+    
+    Nous sommes à l'aube d'une révolution, et toute révolution passe par trois étapes selon Shopenhauer :
+    \begin{itemize}
+        \item ridicule
+        \item dangereux
+        \item évident
+    \end{itemize}
+
+    La blockchain fut considérée comme ridicule, utilisée seulemnt par les geeks, jusqu'à la flambée du bitcoin en décembre 2017, elle est maintenant dangereuse car elle a le potentiel de changer la façon dont le monde fonctionne.
 
     \bibliographystyle{unsrt}
     \bibliography{TD_SSI_biblio}
